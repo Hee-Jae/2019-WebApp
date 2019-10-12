@@ -116,35 +116,56 @@ nav {
 }
 /* Google Map */
 
-/* members */
-.position {
+/* members css start */
+.member-position {
     background-color: white;
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 3px;
 }
-.human {
+.member-human {
     margin: 10px;
     overflow: hidden;
 }
-#info {
+.member-career{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 5px !important;
+}
+.member-human-contents{
+    overflow: hidden;
+}
+#member-info {
     float: left;
-    width: 435px;
-    height: 175px;
+    width: 40%;
 }
-#interest {
-    float: right;
-    width: 550px;
-    height: 175px;
+#member-interest {
+    float: left;
+    width: 40%;
 }
-.human img {
+#member-interest ul{
+    list-style: none;
+}
+#member-interest ul li:first-child{
+    list-style-image: url('css_img/member_bullet.png');
+}
+#member-interest li{
+    padding-left:6px;
+}
+#member-info ul{
+    list-style-image: url('css_img/member_bullet.png');
+}
+#member-info li{
+    padding-left:6px;
+}
+.member-human img {
     float: left;
 }
-.photo {
+.member-photo {
     width: 140px;
     height: 175px;
 }
-.position h2 {
+.member-position h2 {
     font-size: 20px;
     font-weight: bold;
     width: 100%;
@@ -156,23 +177,46 @@ nav {
     height: 52px;
 }
 
-.position li {
+.member-position li {
     margin: 13px 0;
     margin-left: 30px;
 }
-.name {
+.member-name {
     margin-top: 5px !important;
     font-weight: bold;
     font-size: 20px;
 }
-#info li {
-    word-break: break-all;
+.member-article {
+    margin-top: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 20px 0px #999;
 }
-.position ul {
-    list-style: square;
-    float: left;
+.member-article h1, h2{
+    margin-bottom: 20px;
 }
-/* members */
+.member-article h1{
+    border-bottom: solid rgb(200, 200, 200) 1px;
+    padding-bottom: 10px;
+    color: rgb(127, 161, 172);
+}
+.member-article h2 {
+    font-weight: bold;
+    font-size: 25px;
+}
+.member-article h1 .h1-border{
+    font-weight: bold;
+    padding: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom: solid 3px rgb(127, 161, 172);
+}
+
+
+/* members css end */
 
 /* notices */
 /* .notices-section:first-child {
