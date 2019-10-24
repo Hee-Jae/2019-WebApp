@@ -515,9 +515,10 @@ form {
     background-color: rgba(167, 201, 212, 80);
     color: white;
     width:220px;
-    margin-left: 11%;
     margin-top: 50px;
-    padding-top: 15px;
+    margin-left: 11%;
+    padding: 20px;
+    padding-top: 30px;
     float:left;
     border-radius: 2px;
     box-shadow: 0px 0px 20px 0px #999;
@@ -525,39 +526,44 @@ form {
 
 #left_banner_yc ul{
     list-style: none;
-    padding-left: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-left: 0px;
 }
+
+#left_banner_yc li{
+    padding-left: 26px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#left_banner_yc li:hover{
+    background-color: black;
+    border-radius: 3px;
+}
+
 
 #left_banner_yc a{
     color: white;
-}
-
-#left_banner_yc a:hover{
     text-decoration: none;
 }
 
 
-.banner_list_yc li{
-    padding-top: 10px;
+.banner_head{
+    font-size: 12pt;
+    margin-left: 26px;
 }
 
-.banner_list_yc li:hover{
+.banner_head:hover{
     background-color: black;
-    border-radius: 2px;
+    border-radius: 3px;
 }
 
+#banner_hr{
+    margin: 25px;
+}
 
 .participate{
     padding-top: 15px;
 }
-
-.banner_list_yc span:hover{
-    background-color: black;
-    border-radius: 2px;
-}
-
 
 .article_yc {
     margin-top: 50px;
@@ -599,4 +605,19 @@ form {
     border-bottom: solid 3px rgb(127, 161, 172);
 }
 
+.part_head{
+    font-size: 16pt;
+    margin-top: 20pt;
+    margin-bottom: 10pt;
+}
+
+.article_yc li{
+    margin-top: 12pt;
+    font-size: 11pt;
+}
+
+.part_part{
+    font-size: 12pt;
+    font-weight: bold;
+}
 /*publication by YC*/
