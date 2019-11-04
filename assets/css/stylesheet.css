@@ -378,6 +378,21 @@ hr {
 .courses-content a {
     color: white;
 }
+
+.courses_home_content {
+    /* border: 1px solid yellow; */
+}
+.courses_home_title {
+    padding: 1% 1% 1% 1%;
+    background-color: rgb(169, 194, 202);
+    height: 40px;
+    font-size: 130%;
+    /* border: 1px solid pink; */
+}
+.courses_home_text {
+    margin: 3% 3% 3% 3%;
+    /* border: 1px solid blue; */
+}
 /* courses */
 
 /* index */

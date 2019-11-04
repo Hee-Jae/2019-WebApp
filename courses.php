@@ -15,17 +15,17 @@
 
                 <div class="courses-content">
                     <div class="courses">
-                        <div class="courses-code">CSE107</div>
-                        <div class="courses-name">Logical Fundamentals of Programming</div>
-                        <div class="courses-slides"><a href="#">Slides</a></div>
-                        <div class="courses-home"><a href="#">Home</a></div>
+                        <div class="courses-code">CSE326</div>
+                        <div class="courses-name">Web Application Development</div>
+                        <div class="courses-slides"><a href="courses_slides.php">Slides</a></div>
+                        <div class="courses-home"><a href="courses_home.php">Home</a></div>
                     </div>
                 </div>
 
                 <div class="courses-content">
                     <div class="courses">
-                        <div class="courses-code">CSE326</div>
-                        <div class="courses-name">Web Application Development</div>
+                        <div class="courses-code">CSE107</div>
+                        <div class="courses-name">Logical Fundamentals of Programming</div>
                         <div class="courses-slides"><a href="#">Slides</a></div>
                         <div class="courses-home"><a href="#">Home</a></div>
                     </div>

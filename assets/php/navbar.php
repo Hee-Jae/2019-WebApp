@@ -6,9 +6,6 @@
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="nav navbar-nav mr-auto">
-                    <li class="nav-item <?php if ($currentpage === 'NOTICE') {echo ' active';} ?>">
-                        <a class="btn nav-link <?php if ($currentpage === 'NOTICE') {echo ' btn-info';} ?>" href="notice.php">NOTICE</a>
-                    </li>
                     <li class="nav-item <?php if ($currentpage === 'MEMBER') {echo ' active';} ?>">
                         <a class="btn nav-link <?php if ($currentpage === 'MEMBER') {echo ' btn-info';} ?>" href="member.php">MEMBER</a>
                     </li>
@@ -20,6 +17,9 @@
                     </li>
                     <li class="nav-item <?php if ($currentpage === 'COURSES') {echo ' active';} ?>">
                         <a class="btn nav-link <?php if ($currentpage === 'COURSES') {echo ' btn-info';} ?>" href="courses.php">COURSES</a>
+                    </li>
+                    <li class="nav-item <?php if ($currentpage === 'QNA') {echo ' active';} ?>">
+                        <a class="btn nav-link <?php if ($currentpage === 'QNA') {echo ' btn-info';} ?>" href="qna.php">QNA</a>
                     </li>
                     <li class="nav-item dropdown <?php if ($currentpage === 'GALLARY') {echo ' active';} ?>">
                         <a class="btn nav-link dropdown-toggle <?php if ($currentpage === 'GALLARY') {echo ' btn-info';} ?>" id="gallary" href="#" data-toggle="dropdown">GALLARY</a>
