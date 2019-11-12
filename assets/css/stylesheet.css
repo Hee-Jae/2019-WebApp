@@ -746,3 +746,23 @@ form {
     float: left;
 }
 /*slide by YC*/
+
+/* lecture.php css */
+.lctop{
+    border-width: 95%;
+    border: 3px solid black;
+    margin: auto;
+    overflow: hidden;
+}
+
+.lctopbox{
+    float: left;
+    margin: 0px;
+    padding: 0;
+} 
+
+#expansion{
+    float: right;
+    margin-right: 1%;
+}
+/* lecture.php css */
