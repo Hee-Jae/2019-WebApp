@@ -11,10 +11,10 @@
             <h1><span class="h1-border">Login</span></h1>
             <form action="./assets/php/login.php" method='post'>
                 <div class="form-group">
-                    <input class="form-control" name="username" placeholder="Username"/>
+                    <input class="form-control" name="username" placeholder="Username" required/>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" type="password" name="password" placeholder="Password"/>
+                    <input class="form-control" type="password" name="password" placeholder="Password" required/>
                 </div>
                 <button class="btn-primary btn btn-lg pull-right" type="submit"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Login</button>
             </form>

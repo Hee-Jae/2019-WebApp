@@ -1,5 +1,5 @@
 <?php
-    
+    // $db = new PDO("mysql:dbname=idpw;host=localhost", "root", "root");
     $username = $_POST['username'];
     $password = $_POST['password'];
     if($username == 'admin' && $password == 'root'){
