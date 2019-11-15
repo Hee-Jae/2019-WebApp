@@ -9,7 +9,7 @@
         <!-- Article -->
         <div class="login-article">
             <h1><span class="h1-border">Login</span></h1>
-            <form action="./assets/php/login.php">
+            <form action="./assets/php/login.php" method='post'>
                 <div class="form-group">
                     <input class="form-control" name="username" placeholder="Username"/>
                 </div>

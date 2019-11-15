@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <nav class="navbar navbar-expand-lg navbar-light">
             <a class="navbar-brand" href="index.php"><img src="https://selab.hanyang.ac.kr/common/images/selab_logo_S.png" alt="Logo"/></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
@@ -35,9 +36,18 @@
                     <li class="nav-item <?php if ($currentpage === 'CONTACT') {echo ' active';} ?>">
                         <a class="btn nav-link <?php if ($currentpage === 'CONTACT') {echo ' btn-info';} ?>" href="contact.php">CONTACT</a>
                     </li>
-                    <li class="nav-item <?php if ($currentpage === 'LOGIN') {echo ' active';} ?>">
-                        <a class="btn nav-link <?php if ($currentpage === 'LOGIN') {echo ' btn-info';} ?>" href="login.php">LOGIN</a>
-                    </li>
+                    <?php
+                        if(!isset($_SESSION['username']) || !isset($_SESSION['password'])){
+                            echo '<li class="nav-item'; if ($currentpage === "LOGIN") {echo ' active';} echo'">';
+                            echo '<a class="btn nav-link'; if ($currentpage === "LOGIN") {echo ' btn-info';} echo '" href="login.php">LOGIN</a>';
+                            echo '</li>';
+                        }
+                        else {
+                            echo '<li class="nav-item">';
+                            echo '<a class="btn nav-link" href="assets/php/logout.php">LOGOUT</a>';
+                            echo '</li>';
+                        }
+                    ?>
                 </ul>
             </div>
         </nav>

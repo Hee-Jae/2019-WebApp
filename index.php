@@ -1,5 +1,4 @@
 <!DOCTYPE HTML>
-
 <html lang="ko">
     <?php include('./assets/php/head.php'); ?>
     <?php $currentpage = 'HOME'; ?>
