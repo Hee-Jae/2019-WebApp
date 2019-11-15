@@ -1,8 +1,23 @@
 <?php
-    // $db = new PDO("mysql:dbname=idpw;host=localhost", "root", "root");
+    $db = new PDO("mysql:dbname=idpw;host=localhost", "root", "root");
+    $userdata = $db->query("select * from users");
+
     $username = $_POST['username'];
     $password = $_POST['password'];
-    if($username == 'admin' && $password == 'root'){
+
+    $bool_id = false;
+    $bool_pw = false;
+
+    foreach ($userdata as $data){
+        if($data['user_id'] == $username){
+            $bool_id = true;
+        }
+        if($data['user_pw'] == $password){
+            $bool_pw = true;
+        }
+    }
+    
+    if($bool_id && $bool_pw){
         session_start();
         $_SESSION['username'] = $username;
         $_SESSION['password'] = $password;
