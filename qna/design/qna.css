@@ -1,0 +1,114 @@
+
+/* 질문 작성, 수정, 삭제 버튼 */
+
+.checkbox {
+    display: none;
+}
+.title {
+    color: blue;
+    font-weight: bold;
+    display: inline-block;
+}
+.post_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.checkbox:checked + .title + .post_button{
+    max-height: 1000px;
+}
+
+.update_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.checkbox:checked + .title + .checkbox + .title + .checkbox + .title + .update_button{
+    max-height: 1000px;
+}
+
+.delete_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.checkbox:checked + .title + .checkbox + .title + .update_button + .delete_button{
+    max-height: 1000px;
+}
+
+.reply_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.checkbox:checked + .title + .update_button + .delete_button +.reply_button{
+    max-height: 1000px;
+}
+
+/* 댓글 수정, 삭제 버튼 */
+.rep_checkbox {
+    display: none;
+}
+.rep_title {
+    color: blue;
+    font-weight: bold;
+    display: inline-block;
+}
+.rep_update_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.rep_checkbox:checked + .rep_title + .rep_checkbox + .rep_title +.rep_update_button{
+    max-height: 1000px;
+}
+
+.rep_delete_button {
+    max-height: 0px;
+    overflow: hidden;
+}
+.rep_checkbox:checked + .rep_title + .rep_update_button +.rep_delete_button{
+    max-height: 1000px;
+}
+
+/* 기타 디자인 */
+#qna_page{
+    width:400px;
+    float: right;
+    overflow: hidden;
+    border-left: 3px solid;
+    padding-left:10px;
+}
+#question_button label{
+    font-size: 30px;
+    border: 2px solid blue;
+    margin-bottom: 5px;
+}
+
+.query_button label{
+    font-size: 15px;
+    border: 1px solid blue;
+    margin: 1px;
+}
+
+.contents{
+    width: 300px;
+    border: 2px solid;
+    margin-bottom: 5px;
+}
+
+.ans_contents{
+    width: 300px;
+    border: 2px solid;
+    margin-bottom: 5px;
+    margin-left: 80px;
+}
+#name{
+    border-bottom: 1px solid;
+    margin-top: 0px;
+}
+
+.input_box{
+    border: 1px solid;
+    font-size: 15px;
+    font-weight: bold;
+}
+.input_box p{
+    margin: 1px;
+    padding: 1px;
+}
