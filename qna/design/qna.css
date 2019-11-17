@@ -101,6 +101,7 @@
 #name{
     border-bottom: 1px solid;
     margin-top: 0px;
+    position: relative;
 }
 
 .input_box{

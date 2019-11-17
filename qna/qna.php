@@ -35,11 +35,15 @@
         </div> <!-- question_button -->
 
         <?php
-        $db = new PDO("mysql:dbname=webapp; host=localhost", "root", "your password");
+        require("lib/password.php");
+        $db = new PDO("mysql:dbname=webapp; host=localhost", "root", $your_password);
         $rows = $db -> query("SELECT * FROM Question");
         foreach($rows as $row){ ?>
             <div class="contents">
-                <p id="name"> <?=$row["name"] ?></p>
+                <p id="name">
+                    <?=$row["name"] ?>
+                    <?=$row["time"] ?>
+                </p>
                 <p> <?=$row["content"] ?> </p>
                 <div class="query_button">
                     <input type="radio" class="checkbox" name="button" id="update_question<?=$row["id"]?>" />
@@ -89,7 +93,10 @@
             $answer = $db -> query("SELECT * FROM Answer WHERE q_id = $q_id");
             foreach($answer as $ans){ ?>
                 <div class="ans_contents">
-                    <p id="name"> <?=$ans["name"] ?></p>
+                    <p id="name">
+                        <?=$ans["name"] ?>
+                        <?=$ans["time"] ?>
+                    </p>
                     <p> <?=$ans["content"] ?> </p>
                     <div class="query_button">
                         <input type="radio" class="rep_checkbox" name="button" id="rep_update_question<?=$ans["id"]?>" />
