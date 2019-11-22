@@ -17,7 +17,7 @@
                     <div class="courses">
                         <div class="courses-code">CSE326</div>
                         <div class="courses-name">Web Application Development</div>
-                        <div class="courses-slides"><a href="courses_slides.php">Slides</a></div>
+                        <div class="courses-slides"><a href="lecture.php">Slides</a></div>
                         <div class="courses-home"><a href="courses_home.php">Home</a></div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <div class="courses-code">CSE326</div>
                         <div class="courses-name">Web Application Development</div>
                         <div class="courses-slides"><a href="lecture.php">Slides</a></div>
-                        <div class="courses-home"><a href="lecture.php">Home</a></div>
+                        <div class="courses-home"><a href="courses_home.php">Home</a></div>
                     </div>
                 </div>
 
