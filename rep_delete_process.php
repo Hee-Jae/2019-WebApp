@@ -1,5 +1,5 @@
 <?php
-	require("lib/password.php");
+	include('assets/php/password.php');
 	$password = $_POST["password"];
 	$id = $_POST["id"];
 	
@@ -12,7 +12,7 @@
 
 	if((string)$password == $origin_pw){
 		$db -> exec("DELETE FROM Answer WHERE id=$id");
-		header('Location:qnaside.php');
+		header('Location:lecture.php');
 	}
 	else{
 		header('Location:alert.php');

@@ -1,5 +1,5 @@
 <?php
-require("lib/password.php");
+include('assets/php/password.php');
 $name = $_POST["name"];
 $content = $_POST["content"];
 $password = $_POST["password"];
@@ -13,5 +13,5 @@ $password = $db -> quote($password);
 
 $db -> exec("INSERT INTO Answer(q_id,name,content,password, time) VALUES ($q_id, $name, $content, $password, NULL)");
 
-header('Location: qnaside.php');
+header('Location: lecture.php');
 ?>

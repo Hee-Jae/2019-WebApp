@@ -68,22 +68,19 @@
 
 /* 기타 디자인 */
 #qna_page{
-    margin-top: 50px;
     width:400px;
-    float: right;
-    overflow: hidden;
-    border: 3px solid;
-    padding-left:10px;
+    float: left;
+    overflow: scroll;
+    background-color: white;
+    max-height: 830px;
 }
 #qna_question_button label{
     font-size: 30px;
-    border: 2px solid blue;
     margin-bottom: 5px;
 }
 
 .qna_query_button label{
     font-size: 15px;
-    border: 1px solid blue;
     margin: 1px;
 }
 
@@ -104,13 +101,16 @@
     margin-top: 0px;
     position: relative;
 }
-
 .qna_input_box{
     border: 1px solid;
     font-size: 15px;
     font-weight: bold;
 }
 .qna_input_box p{
-    margin: 1px;
     padding: 1px;
+    margin: 1px;
+}
+
+.qna_input_box form{
+    text-align: left;
 }

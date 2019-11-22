@@ -530,8 +530,7 @@ form {
     background-color: rgba(167, 201, 212, 80);
     color: white;
     width:220px;
-    margin-top: 50px;
-    margin-left: 11%;
+    margin-left: 3%;
     padding: 20px;
     padding-top: 30px;
     float:left;
@@ -581,15 +580,17 @@ form {
 }
 
 .article_yc {
-    margin-top: 50px;
-    margin-left: 410px;
+    margin-left: 330px;
     background-color: rgb(255, 255, 255);
-    margin-right: 10%;
+    /* margin-right: 5%; */
     padding: 20px;
     padding-left: 25px;
     padding-right: 30px;
     border-radius: 3px;
     box-shadow: 0px 0px 20px 0px #999;
+    width: 920px;
+    max-width: 920px;
+    float: left;
 }
 
 .article_yc h1{
@@ -766,3 +767,8 @@ form {
     margin-right: 1%;
 }
 /* lecture.php css */
+
+#all_contents{
+    overflow: hidden;
+    margin-top: 50px;
+}

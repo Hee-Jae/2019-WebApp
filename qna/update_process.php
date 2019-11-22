@@ -14,7 +14,7 @@
 
 	if((string)$password == $origin_pw){
 		$db -> exec("UPDATE Question SET content=$content WHERE id=$id");
-		header('Location:qna.php');
+		header('Location:qnaside.php');
 	}
 	else{
 		header('Location:alert.php');
