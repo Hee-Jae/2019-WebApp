@@ -678,9 +678,10 @@ form {
 #slide_qna{
     float: right;
     width: 400px;
-    height: 1000px;
+    height: 900px;
     background-color: rgb(195,195,195);
     overflow: scroll;
+    padding: 0;
 }
 
 #lec_slide{
@@ -745,6 +746,10 @@ form {
 
 .question img,.ans img{
     float: left;
+}
+
+#q_form div input{
+    margin: 4px;
 }
 /*slide by YC*/
 
