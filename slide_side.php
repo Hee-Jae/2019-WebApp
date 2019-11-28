@@ -39,7 +39,9 @@
                                 <img src="https://png.pngtree.com/element_our/png_detail/20181026/avatar-vector-icon-man-vector-symbol-avatar-icon-png_219876.jpg" width="50" />
                                 <p class="who"><?=$who_asked[$i]?></p>
                                 <p class="when"><?=$when_asked[$i]?></p>
+                                
                             </div>
+                            <p>편집 삭제 답글</p>
                             <div class="q_or_a">
                                 <?=$what_asked[$i]?>
                             </div>
@@ -58,7 +60,14 @@
                             </div>
                         <?php } ?>
                     <?php } ?>
-
+                    <form id="q_form" action="">
+                        <div>
+                            <input type="text" size="6" placeholder="닉네임" name="slide_question_id"/>
+                            <input type="text" size="6" placeholder="비밀번호" name="slide_question_pw"/>
+                            <input type="text" size="40" maxlength="1000" placeholder="댓글" name="slide_question"/>
+                        </div>
+                        <input type="submit" value="제출" />
+                    </form>
                 </div>
                 <div id="lec_slide">
                     재밌는 상상 한 번 해보자고.
