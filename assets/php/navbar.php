@@ -20,7 +20,7 @@
                         <a class="btn nav-link <?php if ($currentpage === 'COURSES') {echo ' btn-info';} ?>" href="courses.php">COURSES</a>
                     </li>
                     <li class="nav-item <?php if ($currentpage === 'QNA') {echo ' active';} ?>">
-                        <a class="btn nav-link <?php if ($currentpage === 'QNA') {echo ' btn-info';} ?>" href="qna.php">QNA</a>
+                        <a class="btn nav-link <?php if ($currentpage === 'QNA') {echo ' btn-info';} ?>" href="qna-slide.php">QNA</a>
                     </li>
                     <li class="nav-item dropdown <?php if ($currentpage === 'GALLARY') {echo ' active';} ?>">
                         <a class="btn nav-link dropdown-toggle <?php if ($currentpage === 'GALLARY') {echo ' btn-info';} ?>" id="gallary" href="#" data-toggle="dropdown">GALLARY</a>

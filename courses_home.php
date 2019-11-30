@@ -23,7 +23,7 @@
             <hr id="banner_hr">
             <!-- <span class="banner_head">SLIDES</span> -->
             <ul>
-                <li><a href="courses_slides.php">Slides</a></li>
+                <li><a href="lecture.php">Slides</a></li>
             </ul>
         </div>
         <div class="article_yc">

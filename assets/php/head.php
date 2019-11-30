@@ -9,6 +9,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- StyleSheet CSS -->
     <link href="./assets/css/stylesheet.css" type="text/css" rel="stylesheet" />
+    <!-- javascript -->
+    <script src="assets/js/qna.js"></script>
     <!-- Google Font(Nanum Gothic|Roboto) -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap" rel="stylesheet">
 </head>
