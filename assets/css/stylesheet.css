@@ -6,6 +6,7 @@
 html body {
     background-color: rgb(230, 230, 230);
 }
+
 /* Back Ground Color */
 /* NavBar */
 nav {
@@ -13,7 +14,7 @@ nav {
     border-radius: 0 0 5px 5px;
 }
 
-.navbar-brand{
+.navbar-brand {
     margin-left: 10%;
 }
 
@@ -21,7 +22,7 @@ nav {
     width: 80%;
 }
 
-.login{
+.login {
     margin-right: 10%;
 }
 
@@ -32,14 +33,16 @@ nav {
 .nav-item {
     margin: 5px;
 }
+
 /* NavBar */
 /* Footer */
-.footer p{
+.footer p {
     margin-left: 10%;
     color: grey;
     font-size: 70%;
     margin-top: 15px;
 }
+
 /* Footer */
 /* Article */
 .article {
@@ -52,11 +55,13 @@ nav {
     box-shadow: 0px 0px 20px 0px #999;
 }
 
-.article h1, h2, #googleMap {
+.article h1,
+h2,
+#googleMap {
     margin-bottom: 20px;
 }
 
-.article h1{
+.article h1 {
     border-bottom: solid rgb(200, 200, 200) 1px;
     padding-bottom: 10px;
     color: rgb(127, 161, 172);
@@ -67,7 +72,7 @@ nav {
     font-size: 25px;
 }
 
-.article h1 .h1-border{
+.article h1 .h1-border {
     font-weight: bold;
     padding: 10px;
     padding-left: 10px;
@@ -86,11 +91,13 @@ nav {
     box-shadow: 0px 0px 20px 0px #999;
 }
 
-.login-article h1, h2, #googleMap {
+.login-article h1,
+h2,
+#googleMap {
     margin-bottom: 20px;
 }
 
-.login-article h1{
+.login-article h1 {
     border-bottom: solid rgb(200, 200, 200) 1px;
     padding-bottom: 10px;
     color: rgb(127, 161, 172);
@@ -101,70 +108,99 @@ nav {
     font-size: 25px;
 }
 
-.login-article h1 .h1-border{
+.login-article h1 .h1-border {
     font-weight: bold;
     padding: 10px;
     padding-left: 10px;
     padding-right: 10px;
     border-bottom: solid 3px rgb(127, 161, 172);
 }
+
 /* Article */
 /* Google Map */
 #googleMap {
     width: 100%;
     height: 400px;
 }
+
 /* Google Map */
 
 /* members css start */
+
+.login-article li {
+    display: inline-block;
+}
+
+.right-align {
+    float: right;
+    margin-right: 5px;
+}
+
+.la {
+    margin-right: 15px;
+}
+
 .member-position {
     background-color: white;
     overflow: hidden;
     margin-bottom: 30px;
     border-radius: 3px;
 }
+
 .member-human {
     margin: 10px;
     overflow: hidden;
 }
-.member-career{
+
+.member-career {
     font-size: 20px;
     font-weight: bold;
     margin-top: 5px !important;
 }
-.member-human-contents{
+
+.member-human-contents {
     overflow: hidden;
 }
+
 #member-info {
     float: left;
     width: 40%;
 }
+
 #member-interest {
     float: left;
     width: 40%;
 }
-#member-interest ul{
+
+#member-interest ul {
     list-style: none;
 }
-#member-interest ul li:first-child{
+
+#member-interest ul li:first-child {
     list-style-image: url('css_img/member_bullet.png');
 }
-#member-interest li{
-    padding-left:6px;
+
+#member-interest li {
+    padding-left: 6px;
 }
-#member-info ul{
+
+#member-info ul {
     list-style-image: url('css_img/member_bullet.png');
 }
-#member-info li{
-    padding-left:6px;
+
+#member-info li {
+    padding-left: 6px;
 }
+
 .member-human img {
     float: left;
 }
+
 .member-photo {
     width: 140px;
     height: 175px;
 }
+
 .member-position h2 {
     font-size: 20px;
     font-weight: bold;
@@ -181,11 +217,13 @@ nav {
     margin: 13px 0;
     margin-left: 30px;
 }
+
 .member-name {
     margin-top: 5px !important;
     font-weight: bold;
     font-size: 20px;
 }
+
 .member-article {
     margin-top: 50px;
     background-color: rgb(255, 255, 255);
@@ -195,19 +233,24 @@ nav {
     border-radius: 3px;
     box-shadow: 0px 0px 20px 0px #999;
 }
-.member-article h1, h2{
+
+.member-article h1,
+h2 {
     margin-bottom: 20px;
 }
-.member-article h1{
+
+.member-article h1 {
     border-bottom: solid rgb(200, 200, 200) 1px;
     padding-bottom: 10px;
     color: rgb(127, 161, 172);
 }
+
 .member-article h2 {
     font-weight: bold;
     font-size: 25px;
 }
-.member-article h1 .h1-border{
+
+.member-article h1 .h1-border {
     font-weight: bold;
     padding: 10px;
     padding-left: 10px;
@@ -233,25 +276,30 @@ nav {
     border-radius: 3px;
     /* border: 1px solid black; */
 }
+
 .post-title {
     float: left;
     /* border: 1px solid green; */
 }
-.post-title a{
+
+.post-title a {
     font-size: 150%;
     color: rgb(24, 130, 146);
 }
+
 .post-date {
     float: right;
     color: rgba(0, 0, 0, 0.411);
     font-size: 70%;
     /* border: 1px solid blue; */
 }
+
 .post-summary {
     clear: both;
     font-size: 90%;
     /* border: 1px solid pink; */
 }
+
 hr {
     color: rgba(0, 0, 0, 0.411);
     padding: 0%;
@@ -265,26 +313,31 @@ hr {
     padding: 0% 3% 0% 3%;
     font-size: 70%;
 }
+
 #notice-post-writer {
     width: 20%;
     float: left;
     /* border: 1px solid red; */
 }
+
 #notice-post-date {
     width: 20%;
     float: left;
     /* border: 1px solid blue; */
 }
+
 #notice-post-hits {
     width: 20%;
     float: left;
     /* border: 1px solid yellow; */
 }
+
 .notice-post-info hr {
     padding: 0% 3% 0% 3%;
     clear: both;
 }
-.notice-post-file-list{
+
+.notice-post-file-list {
     clear: both;
     padding: 1% 3% 1% 3%;
     font-size: 80%;
@@ -292,35 +345,44 @@ hr {
     margin: 1% auto;
 
 }
-.notice-post-file-list span{
+
+.notice-post-file-list span {
     padding: 0% 1% 0% 1%;
     font-weight: bold;
 }
-.notice-post-file-list a{
+
+.notice-post-file-list a {
     padding: 0% 1% 0% 1%;
     color: black;
 }
+
 .notice-post-file:nth-child(odd) {
     background-color: rgb(240, 240, 240);
 }
+
 .notice-post-file:nth-child(even) {
     background-color: rgb(231, 231, 231);
 }
+
 .notice-post-content {
     padding: 3% 3% 3% 3%;
 }
+
 #related-title {
     padding: 0% 3% 0% 3%;
     font-size: 90%;
 }
+
 .related-posts ul {
     padding: 0% 3% 0% 3%;
     margin-left: 2%;
     font-size: 80%;
 }
+
 .related-posts a {
     color: black;
 }
+
 /* notice-post */
 
 /* courses */
@@ -337,9 +399,10 @@ hr {
     text-align: center;
     font-size: 130%;
     background-color: rgb(169, 194, 202);
-    color : white;
+    color: white;
     /* border : 1px solid yellow; */
 }
+
 .courses-content {
     padding: 1% 0% 1% 0%;
     font-size: 110%;
@@ -354,11 +417,13 @@ hr {
     color: rgb(85, 85, 85);
     /* border : 1px solid black; */
 }
+
 .courses-name {
     padding: 0% 1% 0% 1%;
     float: left;
     /* border : 1px solid green; */
 }
+
 .courses-slides {
     margin: 0% 1% 0% 1%;
     padding: 0.1% 1% 0.1% 1%;
@@ -367,6 +432,7 @@ hr {
     background-color: rgb(31, 140, 190);
     /* border : 1px solid blue; */
 }
+
 .courses-home {
     margin: 0% 1% 0% 1%;
     padding: 0.1% 1% 0.1% 1%;
@@ -375,6 +441,7 @@ hr {
     background-color: rgb(31, 140, 190);
     /* border : 1px solid pink; */
 }
+
 .courses-content a {
     color: white;
 }
@@ -382,6 +449,7 @@ hr {
 .courses_home_content {
     /* border: 1px solid yellow; */
 }
+
 .courses_home_title {
     padding: 1% 1% 1% 1%;
     background-color: rgb(169, 194, 202);
@@ -389,58 +457,57 @@ hr {
     font-size: 130%;
     /* border: 1px solid pink; */
 }
+
 .courses_home_text {
     margin: 3% 3% 3% 3%;
     /* border: 1px solid blue; */
 }
+
 /* courses */
 
 /* index */
 .img-section {
-	margin: 10px auto;
+    margin: 10px auto;
     position: relative;
     background-color: rgb(149, 149, 149);
 }
+
 .img-section img {
     width: 100%;
     vertical-align: middle;
     opacity: 0.6;
 }
+
 .img-text {
     padding: 20px 10px 20px 10px;
-	text-align: center;
-	position: absolute;
-	top: 60%;
+    text-align: center;
+    position: absolute;
+    top: 60%;
     left: 50%;
-    transform: translate( -50%, -90% );
+    transform: translate(-50%, -90%);
     color: white;
     box-shadow: 0px 0px 20px 0px #999;
 }
+
 .img-text h1 {
     color: white;
 }
+
 .img-text h1 .h1-border {
     font-weight: bold;
     border-bottom: solid 3px white;
 }
+
 /* index */
 
 /* login */
-.form-control{
-    height: 50px;
-}
-
-form {
-    text-align: right;
-}
-/* login */
-.title{
+.title {
     font-weight: bold;
     background: lightblue;
     height: 35px;
     padding-top: 5px;
     padding-left: 10px;
-    margin:0px;
+    margin: 0px;
 }
 
 .research img {
@@ -453,92 +520,93 @@ form {
 }
 
 
-.intro{
+.intro {
     background: skyblue;
-    width:155px;
-    font-size:25px;
+    width: 155px;
+    font-size: 25px;
     text-align: left;
-    padding-left:1%;
+    padding-left: 1%;
     padding-top: 3px;
     height: 40px;
-    margin:0px;
+    margin: 0px;
 }
 
-.content{
+.content {
     overflow: hidden;
-   
+
 }
 
-.research ul {list-style:none;
+.research ul {
+    list-style: none;
     list-style-type: none;
     font-size: 20px;
     background: white;
     margin: 0px;
 }
 
-.research li{
-    margin:5px;
+.research li {
+    margin: 5px;
 }
 
-.content li::before{
+.content li::before {
     content: "\25FC";
     color: skyblue;
-    margin-right:10px;
+    margin-right: 10px;
 }
 
 
 /*publication by YC*/
-#left_banner_yc{
+#left_banner_yc {
     position: fixed;
     background-color: rgba(167, 201, 212, 80);
     color: white;
-    width:220px;
+    width: 220px;
     margin-left: 3%;
     padding: 20px;
     padding-top: 30px;
-    float:left;
+    float: left;
     border-radius: 2px;
     box-shadow: 0px 0px 20px 0px #999;
 }
 
-#left_banner_yc ul{
+#left_banner_yc ul {
     list-style: none;
     padding-left: 0px;
 }
 
-#left_banner_yc li{
+#left_banner_yc li {
     padding-left: 26px;
     margin-top: 10px;
     font-style: italic;
 }
 
-#left_banner_yc li:hover{
+#left_banner_yc li:hover {
     background-color: black;
     border-radius: 3px;
 }
 
 
-#left_banner_yc a{
+#left_banner_yc a {
     color: white;
     text-decoration: none;
 }
 
 
-.banner_head{
+.banner_head {
     font-size: 12pt;
     margin-left: 26px;
 }
 
-.banner_head:hover{
+.banner_head:hover {
     background-color: black;
     border-radius: 3px;
 }
 
-#banner_hr{
+#banner_hr {
     margin: 25px;
 }
 
-.participate{
+.participate {
     padding-top: 15px;
 }
 
@@ -556,7 +624,7 @@ form {
     float: left;
 }
 
-.article_yc h1{
+.article_yc h1 {
     border-bottom: solid rgb(200, 200, 200) 1px;
     padding-bottom: 10px;
     color: rgb(127, 161, 172);
@@ -567,16 +635,16 @@ form {
     font-size: 25px;
 }
 
-.article_yc ul{
+.article_yc ul {
     padding-left: 17px;
 }
 
-.article_yc li{
+.article_yc li {
     margin-bottom: 11px;
     margin-top: 11px;
 }
 
-.article_yc h1 .h1-border{
+.article_yc h1 .h1-border {
     padding: 8px;
     font-weight: bold;
     padding-left: 10px;
@@ -584,80 +652,82 @@ form {
     border-bottom: solid 3px rgb(127, 161, 172);
 }
 
-.part_head{
+.part_head {
     font-size: 16pt;
     margin-top: 20pt;
     margin-bottom: 10pt;
 }
 
-.article_yc li{
+.article_yc li {
     margin-top: 12pt;
     font-size: 11pt;
 }
 
-.part_part{
+.part_part {
     font-size: 12pt;
     font-weight: bold;
 }
+
 /*publication by YC*/
 
 /*gallery by YC*/
-#gallery{
+#gallery {
     overflow: hidden;
 }
 
-.gallery_col{
+.gallery_col {
     width: 300px;
     float: left;
     margin-right: 20px;
     margin-left: 20px;
 }
 
-.one_photo{
+.one_photo {
     margin: 5px;
     margin-bottom: 30px;
-    float:left;
+    float: left;
     background-color: rgb(230, 230, 230);
     box-shadow: 0px 0px 5px 0px #999;
 }
 
-.one_photo img{
+.one_photo img {
     width: 100%;
 }
 
-.one_photo img:hover{
+.one_photo img:hover {
     opacity: 0.5;
 }
 
-.photo_inf{
+.photo_inf {
     margin-top: 25px;
     margin-bottom: 18px;
     text-align: center;
 }
+
 /*gallery by YC*/
 
 /*slide by YC*/
 
-#slide_qna{
+#slide_qna {
     float: right;
     width: 400px;
     height: 900px;
-    background-color: rgb(195,195,195);
+    background-color: rgb(195, 195, 195);
     overflow: scroll;
     padding: 0;
 }
 
-#lec_slide{
+#lec_slide {
     height: 1000px;
 }
 
-.question{
+.question {
     margin-left: auto;
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 350px;
-    border:solid 1px gray;
+    border: solid 1px gray;
     border-radius: 5px;
     background-color: white;
     padding: 10px;
@@ -665,75 +735,82 @@ form {
 
 
 
-.solved,.unsolved{
+.solved,
+.unsolved {
     float: right;
-    border:solid 1px black;
-    border-color: rgb(195,195,195);
+    border: solid 1px black;
+    border-color: rgb(195, 195, 195);
     border-radius: 3px;
     padding: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    color:blue;
+    color: blue;
     font-weight: bold;
 }
-.unsolved{
-    color:red;
+
+.unsolved {
+    color: red;
 }
 
-.info{
+.info {
     margin-bottom: 10px;
 }
 
-.who{
+.who {
     margin: 0;
     font-weight: bold;
 }
-.when{
+
+.when {
     margin: 0;
     font-size: 10pt;
 }
-.q_or_a{
+
+.q_or_a {
     clear: left;
 }
 
-.ans{
+.ans {
     margin-left: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
     width: 350px;
-    border:solid 1px gray;
+    border: solid 1px gray;
     border-radius: 5px;
     background-color: white;
     padding: 10px;
 }
 
-.question img,.ans img{
+.question img,
+.ans img {
     float: left;
 }
 
-#q_form div input{
+#q_form div input {
     margin: 4px;
 }
+
 /*slide by YC*/
 
 /* lecture.php css */
-.lctop{
+.lctop {
     border-width: 95%;
     border: 3px solid black;
     margin: auto;
     overflow: hidden;
 }
 
-.lctopbox{
+.lctopbox {
     float: left;
     margin: 0px;
     padding: 0;
-} 
+}
 
-#expansion{
+#expansion {
     float: right;
     margin-right: 1%;
 }
+
 /* lecture.php css */
 
 /* qna-slide */
@@ -741,28 +818,33 @@ form {
     margin: 2% 5% 2% 5%;
     padding: 0%;
 }
+
 .qna-question {
     background-color: white;
     clear: both;
 }
+
 .qna-question .Q {
     float: left;
     width: 20px;
     height: 22px;
     margin-right: 3px;
 }
+
 .qna-question p {
     float: left;
     width: 90%;
     margin-right: 3px;
     /* font-weight: bold; */
 }
+
 .qna-question .V {
     float: right;
     width: 20px;
     height: 22px;
     margin-right: 3px;
 }
+
 #qna-answer {
     clear: both;
     font-size: 90%;
@@ -770,7 +852,7 @@ form {
     padding: 2% 5% 1% 5%;
 }
 
-#qna_banner{
+#qna_banner {
     position: fixed;
     background-color: rgba(167, 201, 212, 80);
     color: white;
@@ -778,45 +860,51 @@ form {
     margin-left: 3%;
     padding: 20px;
     padding-top: 30px;
-    float:left;
+    float: left;
     border-radius: 2px;
     box-shadow: 0px 0px 20px 0px #999;
 }
-#qna_banner ul{
+
+#qna_banner ul {
     list-style: none;
     margin: auto;
     overflow: hidden;
 }
+
 #qna_banner li {
     font-style: italic;
     width: 30%;
     float: left;
     margin: 1%;
 }
-#qna_banner li:hover{
+
+#qna_banner li:hover {
     background-color: black;
     border-radius: 3px;
 }
-#qna_banner a{
+
+#qna_banner a {
     color: white;
     text-decoration: none;
 }
-.banner_title{
+
+.banner_title {
     font-size: 12pt;
     margin-left: 26px;
 }
 
-.banner_title:hover{
+.banner_title:hover {
     background-color: black;
     border-radius: 3px;
 }
 
-#banner_hr{
+#banner_hr {
     margin: 25px;
 }
+
 /* qna-slide */
 
-#all_contents{
+#all_contents {
     overflow: hidden;
     margin-top: 50px;
 }

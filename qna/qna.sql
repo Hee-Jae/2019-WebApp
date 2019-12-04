@@ -1,6 +1,31 @@
 CREATE DATABASE webapp;
 USE webapp;
 
+CREATE TABLE users(
+    user_id VARCHAR(20) NOT NULL,
+    user_pw VARCHAR(20) NOT NULL
+);
+
+INSERT INTO users VALUES("admin", "root");
+
+create TABLE members(
+    name varchar(20) PRIMARY KEY,
+    email varchar(50),
+    web varchar(50),
+    comment TEXT,
+    rank varchar(20)
+);
+
+INSERT INTO members VALUES("KIM JaeHyeon", "insam2802@gmail.com", "thekingod.tistory.com", "TheKinGoD", "intern");
+
+CREATE TABLE careers(
+    name varchar(20),
+    career TEXT
+);
+
+INSERT INTO careers VALUES("KIM JaeHyeon", "1st Careers");
+INSERT INTO careers VALUES("KIM JaeHyeon", "2nd Careers");
+
 CREATE TABLE question(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(20),

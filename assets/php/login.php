@@ -1,5 +1,5 @@
 <?php
-    $db = new PDO("mysql:dbname=idpw;host=localhost", "root", "root");
+    $db = new PDO("mysql:dbname=webapp;host=localhost", "root", "root");
     $userdata = $db->query("select * from users");
 
     $username = $_POST['username'];
