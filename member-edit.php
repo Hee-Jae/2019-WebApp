@@ -24,7 +24,7 @@
     <!-- Article -->
     <div class="login-article">
         <h1><?php echo $member['name']?></h1>
-        <form action="./assets/php/member-edit.php" method="POST">
+        <form action="./assets/php/member-edit.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -94,6 +94,9 @@
                 </div>
                 <small id="rankHelp"
                     class="form-text text-muted"><?php if($member['rank'] == "Prof") {echo 'Professor';} else {echo$member['rank'];}?></small>
+            </div>
+            <div class="form-group">
+                <input type="file" class="form-control-file" name="image">
             </div>
             <div class="input-group">
                 <button class="btn btn-primary form-control">Edit</button>

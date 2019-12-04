@@ -10,7 +10,7 @@
     <!-- Article -->
     <div class="login-article">
         <h1>Add Member</h1>
-        <form action="./assets/php/member-add.php" method="POST">
+        <form action="./assets/php/member-add.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-prepend">
@@ -66,10 +66,11 @@
                     <label class="form-check-label" for="intern">Intern</label>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="input-group">
-                    <button class="btn btn-primary col">Add</button>
-                </div>
+            <div class="form-group">
+                <input type="file" class="form-control-file" name="image" accept="image/*">
+            </div>
+            <div class="input-group">
+                <button class="btn btn-primary col">Add</button>
             </div>
         </form>
     </div>
