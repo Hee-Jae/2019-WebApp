@@ -30,15 +30,18 @@
     else {
         $rank = $_POST['rank'];
     }
-    $path = '../../images/'.$name.'.png';
+    $path1 = '../../images/'.$_POST['oname'].'.png';
+    $path2 = '../../images/'.$name.'.png';
+    // echo $path1;
+    // echo is_uploaded_file($path2);
     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
-        move_uploaded_file($_FILES["image"]["tmp_name"], $path);
-        echo 'done';
+        move_uploaded_file($_FILES["image"]["tmp_name"], $path2);
+    } else if (is_file($path1)){
+        rename($path1, $path2);
+        echo $path2;
     }
     $db = new PDO("mysql:dbname=webapp;host=localhost", "root", "root");
     $query = 'update members set name="'.$name.'", email="'.$email.'", web="'.$website.'", comment="'.$comment.'", rank="'.$rank.'" where name="'.$_POST['oname'].'"';
-    echo $query;
     $db->exec($query);
-    echo $query;
     echo "<script>window.location.replace('../../member.php');</script>";
 ?>

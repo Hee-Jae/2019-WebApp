@@ -67,7 +67,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <input type="file" class="form-control-file" name="image" accept="image/*">
+                <input type="file" class="form-control-file" name="image" accept="image/*" required>
             </div>
             <div class="input-group">
                 <button class="btn btn-primary col">Add</button>
