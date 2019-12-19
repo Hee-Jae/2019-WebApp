@@ -85,7 +85,7 @@
                     </select>
                 </div> <!-- lctopbox -->
                 <div id="expansion">
-                    <a target="blank" class="fas fa-compress" id='image_link'
+                    <a target="blank" class="fas fa-arrows-alt" id='image_link'
                         href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"></a>
                 </div> <!-- expansoin -->
                 <div class="shortt">
