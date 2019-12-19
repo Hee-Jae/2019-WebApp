@@ -8,7 +8,7 @@
         die("NO input");
     }
     else {
-        $query1 = 'INSERT INTO Answer(q_id,name,content,password, time) VALUES ('.$q_idm.', "'.$id.'", '.$content.', '.$pw.', NULL)';
+        $query1 = 'INSERT INTO Answer(q_id,name,content,password, time) VALUES ('.$q_idm.', "'.$id.'", "'.$content.'", '.$pw.', NULL)';
         print $query1;
         $db->exec($query1);
     }
