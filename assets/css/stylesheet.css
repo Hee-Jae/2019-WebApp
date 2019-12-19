@@ -464,6 +464,10 @@ hr {
     /* border: 1px solid blue; */
 }
 
+.text-bold {
+    font-weight: bold;
+}
+
 /* courses */
 
 /* index */
