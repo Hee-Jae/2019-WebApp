@@ -5,7 +5,7 @@
     display: none;
 }
 .qna_title {
-    color: rgb(230,230,230);
+    color: rgb(230,230,230) !important;
     font-weight: bold;
     display: inline-block;
 }
@@ -46,7 +46,7 @@
     display: none;
 }
 .qna_rep_title {
-    color: rgb(230,230,230);
+    color: rgb(230,230,230) !important;
     font-weight: bold;
     display: inline-block;
 }
@@ -71,7 +71,8 @@
     width:100%;
     float: left;
     overflow: scroll;
-    background-color: rgb(37, 37, 37);
+    background-color: rgb(37, 37, 37) !important;
+    color: rgb(230,230,230) !important;
     max-height: 830px;
 }
 #qna_question_button label{
