@@ -8,7 +8,7 @@
         <?php include('assets/php/navbar.php'); ?>
         <!-- article_yc -->
        
-        <div class="article_yc">
+        <div id="qna_article">
             <div class="participate"> <!-- internatinal -->
                 <h1><span class="h1-border">QNA</span></h1>
                 <p>

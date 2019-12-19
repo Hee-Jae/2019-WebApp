@@ -123,3 +123,22 @@
 .qna_input_box form{
     text-align: left;
 }
+
+#qna_article{
+    margin-top: 40px;
+    background-color: rgb(37, 37, 37);
+    /* margin-right: 5%; */
+    padding: 20px;
+    padding-left: 25px;
+    padding-right: 30px;
+    border-radius: 3px;
+    /* box-shadow: 0px 0px 20px 0px #999; */
+    width: 80%;
+    color: rgb(184, 189, 190);
+    position: relative;
+    min-height: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 20px 0px #999;
+    overflow: hidden;
+}
