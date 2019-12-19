@@ -89,9 +89,7 @@
                         href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"></a>
                 </div> <!-- expansoin -->
                 <div class="shortt">
-                    <a onclick="showHide('qna-answer')" onfocus="this.blur()">
-                        <img src="images/down.png" class="V" width="30">
-                    </a>
+                    <a class="btn fas fa-question" onclick="showHide('qna-answer')" onfocus="this.blur()"></a>
                     <div id="qna-answer" style="display: none">
                         <div id="slide_qna">
                         </div>
