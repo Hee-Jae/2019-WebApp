@@ -18,6 +18,7 @@
                         <p>이름 : <input type='text' name='name'></p>
                         <p>비밀번호 : <input type='password' name='password'></p>
                         <p>카테고리 : <select name="lecture_id"> </p>
+                        <optgroup>
                             <option value="00"> Introduction </option>
                             <option value="01"> The Internet & World Wide Web </option>
                             <option value="02"> Basic HTML </option>
@@ -33,17 +34,20 @@
                             <option value="12"> Ajax, XML, JSON </option>
                             <option value="13"> Web Services </option>
                             <option value="14"> Scriptaculous </option>
-                            <option value="d00"> Introduction - Week 3 </option>
-                            <option value="d01"> About Me (HTML) - Week 4 </option>
-                            <option value="d02"> CSS - Week 5 </option>
-                            <option value="d03"> CSS Design & Layout - Week 6 </option>
-                            <option value="d04"> Movie Review(HTML, CSS, Layout) - Week 7 </option>
-                            <option value="d05"> Basic PHP - Week 9 </option>
-                            <option value="d06"> Forms - Week 10 </option>
-                            <option value="d07"> SQL - Week 11 </option>
-                            <option value="d08"> JavaScript - Week 12 </option>
-                            <option value="d09"> Maze (DOM, Prototype, Event) - Week 13 </option>
-                            <option value="d10"> Ajax & XML & JSON - Week 14 </option>
+                        </optgroup>
+                        <optgroup>
+                            <option value="b00"> Introduction - Week 3 </option>
+                            <option value="b01"> About Me (HTML) - Week 4 </option>
+                            <option value="b02"> CSS - Week 5 </option>
+                            <option value="b03"> CSS Design & Layout - Week 6 </option>
+                            <option value="b04"> Movie Review(HTML, CSS, Layout) - Week 7 </option>
+                            <option value="b05"> Basic PHP - Week 9 </option>
+                            <option value="b06"> Forms - Week 10 </option>
+                            <option value="b07"> SQL - Week 11 </option>
+                            <option value="b08"> JavaScript - Week 12 </option>
+                            <option value="b09"> Maze (DOM, Prototype, Event) - Week 13 </option>
+                            <option value="b10"> Ajax & XML & JSON - Week 14 </option>
+                        <optgroup>
                         </select>
                         <p>질문 : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
                         <p><input type='submit' value='작성'></p>
@@ -56,22 +60,56 @@
         $db = new PDO("mysql:dbname=webapp; host=localhost", "root", "root");
         $rows = $db -> query("SELECT * FROM Question");
         $rowr = $rows->fetchAll(\PDO::FETCH_ASSOC);
-        foreach(array_reverse($rowr) as $row){ ?>
+        foreach(array_reverse($rowr) as $row){
+            $category = "";
+            if($row["lecture_id"] == "00") $category = "Introduction";
+            else if($row["lecture_id"] == "01") $category = "The Internet & World Wide Web";
+            else if($row["lecture_id"] == "02") $category = "Basic HTML";
+            else if($row["lecture_id"] == "03") $category = "CSS for Styling";
+            else if($row["lecture_id"] == "04") $category = "Page Layout";
+            else if($row["lecture_id"] == "05") $category = "PHP";
+            else if($row["lecture_id"] == "06") $category = "Forms";
+            else if($row["lecture_id"] == "07") $category = "Relation Database & SQL";
+            else if($row["lecture_id"] == "08") $category = "JavaScript";
+            else if($row["lecture_id"] == "09") $category = "Document Object Model";
+            else if($row["lecture_id"] == "10") $category = "Prototype";
+            else if($row["lecture_id"] == "11") $category = "Events";
+            else if($row["lecture_id"] == "12") $category = "Ajax, XML, JSON";
+            else if($row["lecture_id"] == "13") $category = "Web Services";
+            else if($row["lecture_id"] == "14") $category = "Scriptaculous";
+            else if($row["lecture_id"] == "b00") $category = "Introduction(LAB)";
+            else if($row["lecture_id"] == "b01") $category = "About Me (HTML)";
+            else if($row["lecture_id"] == "b02") $category = "CSS(LAB)";
+            else if($row["lecture_id"] == "b03") $category = "CSS Design & Layout(LAB)";
+            else if($row["lecture_id"] == "b04") $category = "Movie Review(HTML, CSS, Layout)";
+            else if($row["lecture_id"] == "b05") $category = "Basic PHP(LAB)";
+            else if($row["lecture_id"] == "b06") $category = "Forms(LAB)";
+            else if($row["lecture_id"] == "b07") $category = "SQL(LAB)";
+            else if($row["lecture_id"] == "b08") $category = "JavaScript(LAB)";
+            else if($row["lecture_id"] == "b09") $category = "Maze";
+            else if($row["lecture_id"] == "b10") $category = "Ajax & XML & JSON(LAB)";
+            ?>
             <div class="qna_contents">
                 <p id="qna_name">
                     <?=$row["name"] ?>
+                    
+                    <?=$category?>
                     <?=$row["time"] ?>
                 </p>
-                <p> <?=$row["content"] ?> </p>
+                <p id="qna_answer_content"> <?=$row["content"] ?> </p>
                 <div class="qna_query_button">
-                    <p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_update_question<?=$row["id"]?>" />
-                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title">수정</label>
+                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title qna-first-button">수정</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_delete_question<?=$row["id"]?>" />
                     <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_reply_question<?=$row["id"]?>" />
                     <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글</label>
-                    </p>
+                    
                     <div class="qna_update_button">
                         <div class="qna_input_box">
                             <form action="update_process.php" method="POST">
@@ -116,14 +154,17 @@
                         <?=$ans["name"] ?>
                         <?=$ans["time"] ?>
                     </p>
-                    <p> <?=$ans["content"] ?> </p>
+                    <p id="qna_answer_content"> <?=$ans["content"] ?> </p>
                     <div class="qna_query_button">
-                        <p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_update_question<?=$ans["id"]?>" />
                         <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정</label>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_delete_question<?=$ans["id"]?>" />
                         <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제</label>
-                        </p>
                         <div class="qna_rep_update_button">
                             <div class="qna_input_box">
                                 <form action="rep_update_process.php" method="POST">

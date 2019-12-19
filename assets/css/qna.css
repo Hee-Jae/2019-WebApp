@@ -5,9 +5,12 @@
     display: none;
 }
 .qna_title {
-    color: rgb(230,230,230) !important;
+    color: white !important;
     font-weight: bold;
     display: inline-block;
+}
+.qna_title:hover{
+    text-decoration: underline;
 }
 .qna_post_button {
     max-height: 0px;
@@ -21,7 +24,7 @@
     max-height: 0px;
     overflow: hidden;
 }
-.qna_checkbox:checked + .qna_title + .qna_checkbox + .qna_title + .qna_checkbox + .qna_title + .qna_update_button{
+.qna_checkbox:checked + .qna_title + .qna_checkbox + .qna_title + .qna_checkbox + .qna_title +.qna_update_button{
     max-height: 1000px;
 }
 
@@ -46,7 +49,7 @@
     display: none;
 }
 .qna_rep_title {
-    color: rgb(230,230,230) !important;
+    color:  white !important;
     font-weight: bold;
     display: inline-block;
 }
@@ -72,7 +75,7 @@
     float: left;
     overflow: scroll;
     background-color: rgb(37, 37, 37) !important;
-    color: rgb(230,230,230) !important;
+    color: white !important;
     max-height: 830px;
 }
 #qna_question_button label{
@@ -81,8 +84,14 @@
 }
 
 .qna_query_button label{
-    font-size: 15px;
+    font-size: 15pt;
     margin: 1px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.qna_query_button label:hover{
+    text-decoration: underline;
 }
 .qna_query_button{
     display: block !important;
@@ -91,26 +100,33 @@
 .qna_contents{
     width: 80%;
     min-height: 100px;
-    border: 2px solid;
+    border: none;
     margin-bottom: 5px;
     overflow: hidden;
+    background-color: rgb(45, 47, 52);
 }
 
 .qna_ans_contents{
     width: 80%;
     min-height: 100px;
-    border: 2px solid;
+    border: none;
     margin-bottom: 5px;
     margin-left: 80px;
     overflow: hidden;
+    background-color: rgb(45, 47, 52);
 }
+
 #qna_name{
-    border-bottom: 1px solid;
-    margin-top: 0px;
+    border-bottom: 1px solid !important;;
+    /* margin-top: 0px; */
     position: relative;
+    margin: 10px !important;
+}
+#qna_answer_content{
+    margin: 10px;
 }
 .qna_input_box{
-    border: 1px solid;
+    border: 1px solid !important;;
     font-size: 15px;
     font-weight: bold;
     display: block;
@@ -134,7 +150,7 @@
     border-radius: 3px;
     /* box-shadow: 0px 0px 20px 0px #999; */
     width: 80%;
-    color: rgb(184, 189, 190);
+    color: white;
     position: relative;
     min-height: 800px;
     margin-left: auto;
