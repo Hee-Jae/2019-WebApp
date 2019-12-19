@@ -8,7 +8,7 @@
         <?php include('assets/php/navbar.php'); ?>
         <!-- article_yc -->
         <div id="left_banner_yc">
-            <span class="banner_head">international</span>
+            <span class="banner_head"><a href="#inter">International</a></span>
             <ul>
                 <li><a href="#i2019">2019</a></li>
                 <li><a href="#i2018">2018</a></li>
@@ -17,7 +17,7 @@
                 <li><a href="#i2015">older</a></li>
             </ul>
             <hr id="banner_hr">
-            <span class="banner_head">domestic</span>
+            <span class="banner_head"><a href="#domestic">Domestic</a></span>
             <ul>
                 <li><a href="#d2019">2019</a></li>
                 <li><a href="#d2018">2018</a></li>
@@ -28,7 +28,7 @@
         </div>
         <div class="article_yc">
             <div class="participate"> <!-- internatinal -->
-                <h1><span class="h1-border">International</span></h1>
+                <h1><span class="h1-border" id="inter">International</span></h1>
                 <p>
                     <a name="i2019"></a>
                     <h2 class="part_head">2019</h2>
@@ -116,7 +116,7 @@
             </div>
 
             <div class="participate"> <!-- Domestic -->
-                <h1><span class="h1-border">Domestic</span></h1>
+                <h1><span class="h1-border" id="domestic">Domestic</span></h1>
                 <p>
                     <a name="d2019"></a>
                     <h2 class="part_head">2019</h2>
