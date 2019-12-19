@@ -12,7 +12,7 @@ $password = $db -> quote($password);
 $lecture_id = $db -> quote($lecture_id);
 
 
-$db -> exec("INSERT INTO Question(name,content,password,lecture_id,time) VALUES ($name, $content, $password, $lecture_id, NULL)");
+$db -> exec("INSERT INTO Question(name,content,password,lecture_id,slide,time) VALUES ($name, $content, $password, $lecture_id, 1,NULL)");
 
 header('Location: qna-slide.php');
 ?>
