@@ -28,7 +28,6 @@ CREATE TABLE question(
     content TEXT,
     password VARCHAR(20) NOT NULL,
     lecture_id INT NOT NULL,
-    slide INT NOT NULL,
     time TIMESTAMP NOT NULL
 );
 
@@ -41,21 +40,26 @@ CREATE TABLE answer(
     time TIMESTAMP NOT NULL
 );
 
+CREATE TABLE gallery(
+    title VARCHAR(30) NOT NULL PRIMARY KEY,
+    src VARCHAR(30) NOT NULL
+);
+
 INSERT INTO members VALUES("Scott Ukjin Lee", "scottlee@hanyang.ac.kr", "https://selab.hanyang.ac.kr", "an asst. prof. in the CSE Dept. @ HYU (ERICA)", "Prof");
 
 
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("정희재", "어 이건 질문이야", 123123, 4, 12, NULL);
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("황예찬", "어 이건 질문이야!", 123123, 4, 12, NULL);
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("이효원", "어 이건 질문이야?", 123123, 4, 12, NULL);
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("모지환", "어 이건 질문이야;", 123123, 4, 12, NULL);
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("김재현", "어 이건 질문이야@", 123123, 4, 12, NULL);
-INSERT INTO Question(name,content,password,lecture_id,slide,time)
-VALUES ("박서연", "어 이건 질문이야#", 123123, 4, 12, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("정희재", "어 이건 질문이야", 123123, 4, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("황예찬", "어 이건 질문이야!", 123123, 4, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("이효원", "어 이건 질문이야?", 123123, 4, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("모지환", "어 이건 질문이야;", 123123, 4, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("김재현", "어 이건 질문이야@", 123123, 4, NULL);
+INSERT INTO Question(name,content,password,lecture_id,time)
+VALUES ("박서연", "어 이건 질문이야#", 123123, 4, NULL);
 
 INSERT INTO Answer(q_id,name,content,password, time)
 VALUES (1, "욱진리", "응 그럼 이건 답변이야", 123123, NULL);
@@ -63,3 +67,13 @@ INSERT INTO Answer(q_id,name,content,password, time)
 VALUES (1, "욱진리", "응 그럼 이건 답변이야!", 123123, NULL);
 INSERT INTO Answer(q_id,name,content,password, time)
 VALUES (3, "욱진리", "응 그럼 이건 답변이야?", 123123, NULL);
+
+INSERT INTO gallery VALUES("엠티 삼겹살 파티", "maxresdefault.jpg");
+INSERT INTO gallery VALUES("야구장 나들이", "1567927165901463.jpg");
+INSERT INTO gallery VALUES("학위수여식", "20160204002952_0.jpg");
+INSERT INTO gallery VALUES("엠티 출발 전 단체사진", "44652141.jpg");
+INSERT INTO gallery VALUES("벚꽃 축제", "2018_301377.jpg");
+INSERT INTO gallery VALUES("공항에서 한장", "maxresdefault (1).jpg");
+INSERT INTO gallery VALUES("박사졸업 송별회", "maxresdefault (2).jpg");
+INSERT INTO gallery VALUES("만우절 교복입기", "20190422195026_edkdevoe.jpg");
+INSERT INTO gallery VALUES("0801 채원생일", "I9GUFhn.jpg");

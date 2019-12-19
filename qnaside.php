@@ -3,19 +3,11 @@
 <html>
 <head>
     <meta charset='utf-8'>
-    <link rel="stylesheet" href="design/qna.css">
+    <link rel="stylesheet" href="assets/css/qna.css">
 </head>
 <body>
     <div id="lecture_slide">
     </div>
-    <?php
-        $url2 = "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html#slide48";
-        $url_parse = parse_url($url2);
-        $lecture_id = strrev($url_parse["path"]);
-        $lecture_id = substr($lecture_id, strpos($lecture_id, '-'),2);
-        $lecture_id = (int)strrev($lecture_id);
-        $slide = (int)substr($url_parse["fragment"], 5);
-    ?>
     <div id="qna_page">
         <div id="qna_question_button">
             <input type="checkbox" class="qna_checkbox" id="qna_post_question" />
@@ -25,9 +17,35 @@
                     <form action='post_process.php' method='post'>
                         <p>이름 : <input type='text' name='name'></p>
                         <p>비밀번호 : <input type='password' name='password'></p>
-                        질문 : <p><textarea name='content' cols='35' rows='5'></textarea></p>
-                        <p> <input type='hidden' name='lecture_id' value='<?=$lecture_id?>'> </p>
-                        <p> <input type='hidden' name='slide' value='<?=$slide?>'> </p>
+                        <p>카테고리 : <select name="lecture_id"> </p>
+                            <option value="00"> Introduction </option>
+                            <option value="01"> The Internet & World Wide Web </option>
+                            <option value="02"> Basic HTML </option>
+                            <option value="03"> CSS for Styling </option>
+                            <option value="04"> Page Layout </option>
+                            <option value="05"> PHP </option>
+                            <option value="06"> Forms </option>
+                            <option value="07"> Relation Database & SQL </option>
+                            <option value="08"> JavaScript </option>
+                            <option value="09"> Document Object Model </option>
+                            <option value="10"> Prototype </option>
+                            <option value="11"> Events </option>
+                            <option value="12"> Ajax, XML, JSON </option>
+                            <option value="13"> Web Services </option>
+                            <option value="14"> Scriptaculous </option>
+                            <option value="d00"> Introduction - Week 3 </option>
+                            <option value="d01"> About Me (HTML) - Week 4 </option>
+                            <option value="d02"> CSS - Week 5 </option>
+                            <option value="d03"> CSS Design & Layout - Week 6 </option>
+                            <option value="d04"> Movie Review(HTML, CSS, Layout) - Week 7 </option>
+                            <option value="d05"> Basic PHP - Week 9 </option>
+                            <option value="d06"> Forms - Week 10 </option>
+                            <option value="d07"> SQL - Week 11 </option>
+                            <option value="d08"> JavaScript - Week 12 </option>
+                            <option value="d09"> Maze (DOM, Prototype, Event) - Week 13 </option>
+                            <option value="d10"> Ajax & XML & JSON - Week 14 </option>
+                        </select>
+                        <p>질문 : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
                         <p><input type='submit' value='작성'></p>
                     </form>
                 </div>
@@ -35,10 +53,10 @@
         </div> <!-- question_button -->
 
         <?php
-        require("lib/password.php");
-        $db = new PDO("mysql:dbname=webapp; host=localhost", "root", $your_password);
+        $db = new PDO("mysql:dbname=webapp; host=localhost", "root", "root");
         $rows = $db -> query("SELECT * FROM Question");
-        foreach($rows as $row){ ?>
+        $rowr = $rows->fetchAll(\PDO::FETCH_ASSOC);
+        foreach(array_reverse($rowr) as $row){ ?>
             <div class="qna_contents">
                 <p id="qna_name">
                     <?=$row["name"] ?>
@@ -47,11 +65,11 @@
                 <p> <?=$row["content"] ?> </p>
                 <div class="qna_query_button">
                     <input type="radio" class="qna_checkbox" name="button" id="qna_update_question<?=$row["id"]?>" />
-                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title">수정</label>
+                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title">수정하기</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_delete_question<?=$row["id"]?>" />
-                    <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제</label>
+                    <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제하기</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_reply_question<?=$row["id"]?>" />
-                    <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글</label>
+                    <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글달기</label>
                 
                     <div class="qna_update_button">
                         <div class="qna_input_box">
@@ -79,7 +97,7 @@
                             <form action="reply_process.php" method="POST">
                                 <p>이름 : <input type='text' name='name'></p>
                                 <p>비밀번호 : <input type='password' name='password'></p>
-                                답변 : <p><textarea name='content' cols='35' rows='5'></textarea></p>
+                                <p> 답변 : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
                                 <p> <input type='hidden' name='id' value='<?=$row["id"]?>'> </p>
                                 <p><input type='submit' value='작성'></p>
                             </form>
@@ -100,9 +118,9 @@
                     <p> <?=$ans["content"] ?> </p>
                     <div class="qna_query_button">
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_update_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정</label>
+                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정하기</label>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_delete_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제</label>
+                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제하기</label>
 
                         <div class="qna_rep_update_button">
                             <div class="qna_input_box">

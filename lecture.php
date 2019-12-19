@@ -60,16 +60,17 @@
                 <a target="blank" id='image_link' href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" ><img src="./images/expansion.png"width = 15px/></a>
                 </div> <!-- expansoin -->
             </div> <!-- lctop -->
-                <iframe name="lecture_frame" src="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" width=100% height=700px scrolling=yes>LectureNote</iframe>
+                <iframe id="lecture_frame_id" name="lecture_frame" src="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" width=100% height=700px scrolling=yes>LectureNote</iframe>
                 <hr>
         </div> <!-- article_yc -->
             <?php
-                $url2 = "https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/06-forms.html#slide48";
-                $url_parse = parse_url($url2);
-                $lecture_id = strrev($url_parse["path"]);
-                $lecture_id = substr($lecture_id, strpos($lecture_id, '-'),2);
-                $lecture_id = (int)strrev($lecture_id);
-                $slide = (int)substr($url_parse["fragment"], 5);
+            ?>
+
+            <?php
+            $lecture_id=0;
+            if(isset($_COOKIE['lecture_id'])){
+                $lecture_id = $_COOKIE['lecture_id'];
+            }
             ?>
             <div id="qna_page">
                 <div id="qna_question_button">
@@ -81,8 +82,7 @@
                                 <p>이름 : <input type='text' name='name'></p>
                                 <p>비밀번호 : <input type='password' name='password'></p>
                                 <p><textarea name='content' cols='35' rows='5'></textarea></p>
-                                <p> <input type='hidden' name='lecture_id' value='<?=$lecture_id?>'> </p>
-                                <p> <input type='hidden' name='slide' value='<?=$slide?>'> </p>
+                                <p><input id="lecture_id_input" type='hidden' name='lecture_id' value=""> </p>
                                 <p><input type='submit' value='작성'></p>
                             </form>
                         </div>
@@ -92,12 +92,14 @@
                 <?php
                 require("assets/php/password.php");
                 $db = new PDO("mysql:dbname=webapp; host=localhost", "root", $your_password);
+                //$lecture_id = $db -> quote($lecture_id);
                 $rows = $db -> query("SELECT * FROM Question");
                 foreach($rows as $row){ ?>
                     <div class="qna_contents">
                         <p id="qna_name">
                             <?=$row["name"] ?>
                             <?=$row["time"] ?>
+                            <?=$lecture_id ?>
                         </p>
                         <p> <?=$row["content"] ?> </p>
                         <div class="qna_query_button">
@@ -204,8 +206,14 @@
             var lecture_id = strrev(res);
             lecture_id = lecture_id.substr(lecture_id.indexOf('-')+1,2);
             lecture_id = strrev(lecture_id);
+            var cur_url = res.concat('#',lecture_id);
+            // alert(cur_url);
             $('#image_link').attr("href", res);
-            window.open(res,'lecture_frame');
+            $('#lecture_frame_id').attr("src", res);
+            $('#lecture_id_input').attr("value", lecture_id);
+            document.cookie="lecture_id="+lecture_id;
+            window.location = '#'+lecture_id;
+            // window.open(res,'lecture_frame');
         }
     </script>
 </html>
