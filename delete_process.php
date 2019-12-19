@@ -13,7 +13,7 @@
 	if((string)$password == $origin_pw){
 		$db -> exec("DELETE FROM Question WHERE id=$id");
 		$db -> exec("DELETE FROM Answer WHERE q_id=$id");
-		header('Location:lecture.php');
+		header('Location:qna-slide.php');
 	}
 	else{
 		header('Location:alert.php');

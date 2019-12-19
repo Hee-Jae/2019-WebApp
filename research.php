@@ -1,3 +1,7 @@
+<?php
+    $db = new PDO("mysql:dbname=webapp;host=localhost", "root", "root");
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="ko">
@@ -8,75 +12,45 @@
         <?php include('assets/php/navbar.php'); ?>
         <!-- Article -->
         <div class="member-article">
-            <h1><span class="h1-border">RESEARCH</span></h1>
+            <h1><span class="h1-border">RESEARCH
+            <?php
+                if(isset($_SESSION['username']) && isset($_SESSION['password'])){
+                    echo '<span class="right-align"><a href="./research-add.php "class="btn fas fa-plus"></a></span>';
+                }
+            ?>
+            </span></h1>
                 <!-- <h2 class="intro">introduction</h2> -->
-
+            <?php
+            $maxid = $db->query("select max(id) from research")->fetchColumn();
+            for(;$maxid>0;$maxid--){
+                $title = $db->query("select * from research where id = $maxid")->fetchColumn(1);
+                if($title != ""){
+            ?>
             <div class="member-position">
-                <h2>Web&Web security</h2>
+                <h2><?=$title?>
+                <?php
+                    if(isset($_SESSION['username']) && isset($_SESSION['password'])){?>
+                        <form action="./research-edit.php" method="POST">
+                            <button class="fas fa-edit btn fa-pull-right" name="title" value="<?=$title?>"></button>
+                        </form>
+                    <?php } ?>
+                </h2>
                 <div class="member-human">
-                    <img class="member-photo" src="images/web_security.png"/>
+                    <img class="member-photo" src="images/<?=$title?>.png" />
                     <div class="member-human-contents">
                         <ul class="research-ul">
-                            <li>Semantic web</li>
-                            <li>Effective Access Control for Web Data</li>
-                            <li>Vulnerability Analysis and Detection for HTML5</li>
-                            <li>JavaScript and Hybrid Application</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Formal Engineering Methods</h2>
-                <div class="member-human">
-                    <img class="member-photo" src="images/formalmethod.png"/>
-                    <div class="member-human-contents">
-                        <ul class="research-ul">
-                            <li>Formal Specification, Validation, and Verification</li>
-                            <li>Model checking, Theorem Proving</li>
-                            <li>Ontology Reasoning, Constraint Solving</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Requirement Engineering</h2>
-                <div class="member-human">
-                    <img class="member-photo" src="images/RE.png"/>
-                    <div class="member-human-contents">
-                        <ul class="research-ul">
-                            <li>Requirement Analysis, Validation and Conflict Detection</li>
-                            <li>Non-Functional Requirements Analysis and Prediction</li>
-                            <li>Product Line and Software Product Line</li>
-                            <li>Requirement Modeling with Extended Mind Map</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Real-Time Software Engineering</h2>
-                <div class="member-human">
-                    <img class="member-photo" src="images/Realtime.png"/>
-                    <div class="member-human-contents">
-                        <ul class="research-ul">
-                            <li>Real-Time Software and Process Modeling</li>
-                            <li>Real-Time Software Specification and Verification</li>
-                            <li>Real-Time Software Integration and Migration Control</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h2>Semi-structured Data</h2>
-                <div class="member-human">
-                    <img class="member-photo" src="images/XML.png"/>
-                    <div class="member-human-contents">
-                        <ul class="research-ul">
-                            <li>XML and XML DB, Visualization of XML-Schema</li>
-                            <li>Ontology and RDF Store</li>
-                            <li>Semistructured Data Integration and Migration</li>
-                            <li>Optimization of X-Query</li>
-                            <li>Consistency Verification for Semistructured Data Manipulation</li>
-                            <li>Domain Specific Extension to XML & Data Translation from RDBMS to XML DBMS</li>
+                            <?php
+                            $info_s = $db->query("select * from info_research where title = '$title'");
+                            foreach($info_s as $info){
+                                $content = $info['info'];?>
+                                <li><?=$content?></li>
+                            <?php } ?>
                         </ul>
                     </div>
                 </div>
             </div>
+                <?php } ?>
+            <?php } ?>
         </div>
         <!-- Footer -->
         <?php include('assets/php/footer.php'); ?>
