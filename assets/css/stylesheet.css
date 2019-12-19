@@ -199,6 +199,7 @@ h2,
 .member-photo {
     width: 140px;
     height: 175px;
+    float: left;
 }
 
 .member-position h2 {
@@ -552,6 +553,10 @@ hr {
     content: "\25FC";
     color: skyblue;
     margin-right: 10px;
+}
+
+.research-ul {
+    float: left;
 }
 
 
