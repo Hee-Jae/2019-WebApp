@@ -5,7 +5,7 @@
     display: none;
 }
 .qna_title {
-    color: blue;
+    color: rgb(230,230,230);
     font-weight: bold;
     display: inline-block;
 }
@@ -46,7 +46,7 @@
     display: none;
 }
 .qna_rep_title {
-    color: blue;
+    color: rgb(230,230,230);
     font-weight: bold;
     display: inline-block;
 }
@@ -68,10 +68,10 @@
 
 /* 기타 디자인 */
 #qna_page{
-    width:750px;
+    width:100%;
     float: left;
     overflow: scroll;
-    background-color: white;
+    background-color: rgb(37, 37, 37);
     max-height: 830px;
 }
 #qna_question_button label{
@@ -88,7 +88,7 @@
 }
 
 .qna_contents{
-    width: 600px;
+    width: 80%;
     min-height: 100px;
     border: 2px solid;
     margin-bottom: 5px;
@@ -96,11 +96,12 @@
 }
 
 .qna_ans_contents{
-    width: 600px;
+    width: 80%;
     min-height: 100px;
     border: 2px solid;
     margin-bottom: 5px;
     margin-left: 80px;
+    overflow: hidden;
 }
 #qna_name{
     border-bottom: 1px solid;

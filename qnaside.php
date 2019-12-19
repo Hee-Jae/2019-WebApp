@@ -64,13 +64,14 @@
                 </p>
                 <p> <?=$row["content"] ?> </p>
                 <div class="qna_query_button">
+                    <p>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_update_question<?=$row["id"]?>" />
-                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title">수정하기</label>
+                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title">수정</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_delete_question<?=$row["id"]?>" />
-                    <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제하기</label>
+                    <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제</label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_reply_question<?=$row["id"]?>" />
-                    <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글달기</label>
-                
+                    <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글</label>
+                    </p>
                     <div class="qna_update_button">
                         <div class="qna_input_box">
                             <form action="update_process.php" method="POST">
@@ -117,11 +118,12 @@
                     </p>
                     <p> <?=$ans["content"] ?> </p>
                     <div class="qna_query_button">
+                        <p>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_update_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정하기</label>
+                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정</label>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_delete_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제하기</label>
-
+                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제</label>
+                        </p>
                         <div class="qna_rep_update_button">
                             <div class="qna_input_box">
                                 <form action="rep_update_process.php" method="POST">

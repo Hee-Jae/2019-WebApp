@@ -11,6 +11,9 @@
         <div class="article">
             <div id="gallery-top">
                 <h1 id="gallery-h1"><span class="h1-border gallery-h1-border">PHOTO</span></h1>
+                <?php
+                if(isset($_SESSION['username'])&&isset($_SESSION['password'])){
+                ?>
                 <form action="gallery_process.php" method="post" enctype="multipart/form-data">
                     <div id="gallery-upload">
                     <input type="text" name="title" placeholder="제목">
@@ -18,6 +21,7 @@
                     <input type="submit" value="등록">
                     </div>
                 </form>
+                <?php }?>
             </div>
             <div id="gallery">
                 <div>
