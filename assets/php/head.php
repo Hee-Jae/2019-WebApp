@@ -14,4 +14,5 @@
     <script src="assets/js/qna.js"></script>
     <!-- Google Font(Nanum Gothic|Roboto) -->
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Roboto&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./assets/js/prototype.js"></script>
 </head>

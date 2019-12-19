@@ -676,9 +676,14 @@ hr {
     padding-right: 30px;
     border-radius: 3px;
     /* box-shadow: 0px 0px 20px 0px #999; */
+<<<<<<< HEAD
     width: 80%;
+=======
+    width: 920px;
+    max-width: 920px;
+>>>>>>> 0eaad759711a2ee966389fbfb95bc3370490bfd1
     color: rgb(184, 189, 190);
-    clear: right;
+    position: relative;
     min-height: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -807,6 +812,8 @@ hr {
     background-color: rgb(195, 195, 195);
     overflow: scroll;
     padding: 0;
+    /* margin-top: 4px; */
+    height: 680px;
 }
 
 #lec_slide {
@@ -940,9 +947,16 @@ hr {
 
 #qna-answer {
     clear: both;
+    width: 400px;
     font-size: 90%;
     background-color: rgb(230, 230, 230);
-    padding: 2% 5% 1% 5%;
+    /* padding: 2% 5% 1% 5%; */
+}
+
+#qna-answer .q_input{
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 #qna_banner {
@@ -1018,4 +1032,16 @@ hr {
 
 .fa-minus {
     color: grey;
+}
+
+
+
+.shortt{
+    position: absolute;
+    top:-15px;
+    right:0px;
+}
+
+.shortt a{
+    float: right;
 }

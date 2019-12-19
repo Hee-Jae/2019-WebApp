@@ -8,6 +8,10 @@ CREATE TABLE users(
 
 INSERT INTO users VALUES("admin", "root");
 
+CREATE TABLE gallaly(
+    file_name VARCHAR(20) NOT NULL
+);
+
 create TABLE members(
     name varchar(20) PRIMARY KEY,
     email varchar(50),
@@ -36,7 +40,8 @@ CREATE TABLE question(
     name VARCHAR(20),
     content TEXT,
     password VARCHAR(20) NOT NULL,
-    lecture_id INT NOT NULL,
+    lecture_id VARCHAR(20) NOT NULL,
+    slide INT NOT NULL,
     time TIMESTAMP NOT NULL
 );
 
