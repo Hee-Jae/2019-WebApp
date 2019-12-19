@@ -55,19 +55,19 @@
                         </optgroup>
                     </select>
                 </div> <!-- lctopbox -->
+                <div id="expansion">
+                <a target="blank" id='image_link' href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" ><img src="./images/expansion.png"width = 15px/></a>
+                </div> <!-- expansoin -->
                 <div class="shortt">    
                     <a onclick="showHide('qna-answer')" onfocus="this.blur()">
-                        <img src="images/down.png" class="V" width="60">
+                        <img src="images/down.png" class="V" width="30">
                     </a>
                     <div id="qna-answer" style="display: none">
                         <div id="slide_qna">
                         </div>
-                        
                     </div>    
                 </div>
-                <div id="expansion">
-                <a target="blank" id='image_link' href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" ><img src="./images/expansion.png"width = 15px/></a>
-                </div> <!-- expansoin -->
+                
             </div> <!-- lctop -->
                 <iframe name="lecture_frame" src="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html" width=100% height=700px scrolling=yes>LectureNote</iframe>
                 <hr>
@@ -89,7 +89,8 @@
             return joinArray;
         }
 
-        function Onchange(){
+        function Onchange(ajax){
+            // alert(ajax.responseText);
             var val = $$("#selectbox")[0];
             var res = val.value;
             var lecture_id = strrev(res);
@@ -134,8 +135,13 @@
                 img.src = "https://png.pngtree.com/element_our/png_detail/20181026/avatar-vector-icon-man-vector-symbol-avatar-icon-png_219876.jpg";
                 img.width = 50;
                 var who = $(document.createElement('p'));
+                var a = $(document.createElement('a'));
+                var showhide = 'as_id' + data[i]['id'];
+                a.href = "javascript:Display('"+showhide+"')";
+                a.addClassName('btn fas fa-edit')
                 who.addClassName("who");
                 who.innerHTML = data[i]['name'] + '<span class="right-align" onclick="q_del('+ data[i]['id'] +','+ data[i]['password'] + ')"><a class="btn fas fa-minus"></a></span>';
+                who.appendChild(a);
                 var when = $(document.createElement('p'));
                 when.addClassName("when");
                 when.innerHTML = data[i]['time'];
@@ -147,8 +153,19 @@
                 qa.innerHTML = data[i]['content'];
                 qa.addClassName("q_or_a");
                 question.appendChild(qa);
+                q_input = $(document.createElement('div'));
+                q_input.addClassName('q_input');
+                q_input.id = 'as_id' + data[i]['id'];
+                q_input.style.display = 'none';
+                q_input.innerHTML = '<input type="text" size="6" placeholder="닉네임"/>'
+                q_input.innerHTML += '<input type="password" size="6" placeholder="비밀번호"/>';
+                q_input.innerHTML += '<input type="text" size="40" maxlength="1000" placeholder="답글"/>';
+                q_input.innerHTML += '<input type="button" onclick="adda('+data[i]['id']+')" value="제출" />'
+                question.appendChild(q_input);
                 $$('#slide_qna')[0].appendChild(question);
                 
+
+                // $$('#slide_qna')[0].appendChild(a);
                 for(j = 0; j < answers.length; j++){
                     if (answers[j]['q_id'] == data[i]['id']){
                         var ans = $(document.createElement('div'));
@@ -177,6 +194,16 @@
                 }
             }
             
+        }
+
+        function Display(id){
+            id = '#'+id;
+            if ($$(id)[0].style.display == 'block'){
+                $$(id)[0].style.display = 'none';
+            }
+            else {
+                $$(id)[0].style.display = 'block';
+            }
         }
 
         function a_del(id, pw){
@@ -219,6 +246,19 @@
             new Ajax.Request("q_add.php", {
                 method: "post",
                 parameters: {"id": id, "pw": pw, "content": content, "l_id": l_id},
+                onSuccess: Onchange,
+                onFailure: ajaxFailed,
+                onException: ajaxFailed
+            });
+        }
+        
+        function adda(id){
+            name = $$('#as_id'+id +' input')[0].value;
+            pw = $$('#as_id'+id +' input')[1].value;
+            content = $$('#as_id'+id +' input')[2].value;
+            new Ajax.Request("a_add.php", {
+                method: "post",
+                parameters: {"id": name, "pw": pw, "content": content, "q_id": id},
                 onSuccess: Onchange,
                 onFailure: ajaxFailed,
                 onException: ajaxFailed
