@@ -5,7 +5,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="collapse navbar-collapse navbar-dark" id="navbarTogglerDemo02">
         <ul class="nav navbar-nav mr-auto">
             <li class="nav-item <?php if ($currentpage === 'MEMBER') {echo ' active';} ?>">
                 <a class="btn nav-link <?php if ($currentpage === 'MEMBER') {echo ' btn-info';} ?>" href="member.php">MEMBER</a>

@@ -12,49 +12,50 @@
 
             <div class="courses-section">
                 <div class="courses-title">Undergraduate Courses<br/></div>
-
-                <div class="courses-content">
-                    <div class="courses">
-                        <div class="courses-code">CSE326</div>
-                        <div class="courses-name">Web Application Development</div>
-                        <div class="courses-slides"><a href="lecture.php">Slides</a></div>
-                        <div class="courses-home"><a href="courses_home.php">Home</a></div>
+                <div class="content-all">
+                    <div class="courses-content">
+                        <div class="courses">
+                            <div class="courses-code">CSE326</div>
+                            <div class="courses-name">Web Application Development</div>
+                            <div class="courses-slides"><a href="lecture.php">Slides</a></div>
+                            <div class="courses-home"><a href="courses_home.php">Home</a></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="courses-content">
-                    <div class="courses">
-                        <div class="courses-code">CSE107</div>
-                        <div class="courses-name">Logical Fundamentals of Programming</div>
-                        <div class="courses-slides"><a href="#">Slides</a></div>
-                        <div class="courses-home"><a href="#">Home</a></div>
+                    <div class="courses-content">
+                        <div class="courses">
+                            <div class="courses-code">CSE107</div>
+                            <div class="courses-name">Logical Fundamentals of Programming</div>
+                            <div class="courses-slides"><a href="#">Slides</a></div>
+                            <div class="courses-home"><a href="#">Home</a></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="courses-content">
-                    <div class="courses">
-                        <div class="courses-code">CSE326</div>
-                        <div class="courses-name">Web Application Development</div>
-                        <div class="courses-slides"><a href="lecture.php">Slides</a></div>
-                        <div class="courses-home"><a href="courses_home.php">Home</a></div>
+                    <div class="courses-content">
+                        <div class="courses">
+                            <div class="courses-code">CSE326</div>
+                            <div class="courses-name">Web Application Development</div>
+                            <div class="courses-slides"><a href="lecture.php">Slides</a></div>
+                            <div class="courses-home"><a href="courses_home.php">Home</a></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="courses-content">
-                    <div class="courses">
-                        <div class="courses-code">CSE326</div>
-                        <div class="courses-name">Web Application Development</div>
-                        <div class="courses-slides"><a href="#">Slides</a></div>
-                        <div class="courses-home"><a href="#">Home</a></div>
+                    <div class="courses-content">
+                        <div class="courses">
+                            <div class="courses-code">CSE326</div>
+                            <div class="courses-name">Web Application Development</div>
+                            <div class="courses-slides"><a href="#">Slides</a></div>
+                            <div class="courses-home"><a href="#">Home</a></div>
+                        </div>
                     </div>
-                </div>
 
-                <div class="courses-content">
-                    <div class="courses">
-                        <div class="courses-code">CSE406</div>
-                        <div class="courses-name">Software Engineering</div>
-                        <div class="courses-slides"><a href="#">Slides</a></div>
-                        <div class="courses-home"><a href="#">Home</a></div>
+                    <div class="courses-content">
+                        <div class="courses">
+                            <div class="courses-code">CSE406</div>
+                            <div class="courses-name">Software Engineering</div>
+                            <div class="courses-slides"><a href="#">Slides</a></div>
+                            <div class="courses-home"><a href="#">Home</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +63,7 @@
 
             <div class="courses-section">
                 <div class="courses-title">Postgraduate Courses</div>
-
+                <div class="content-all">
                 <div class="courses-content">
                     <div class="courses">
                         <div class="courses-code">CSE609</div>
@@ -88,6 +89,7 @@
                         <div class="courses-slides"><a href="#">Slides</a></div>
                         <div class="courses-home"><a href="#">Home</a></div>
                     </div>
+                </div>
                 </div>
             </div>
         </div>
