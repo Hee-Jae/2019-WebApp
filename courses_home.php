@@ -44,7 +44,7 @@
 
             <div id="lecturer">
                 <div class="courses_home_content">
-                    <div class="courses_home_title"> Lecturer </div>
+                    <div class="courses_home_title"> Lecturer: Scott Lee </div>
                     <div class="courses_home_text">
                         <ol>
                             <li>Office: 학연산클러스터 617호</li>
