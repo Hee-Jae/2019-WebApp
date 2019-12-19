@@ -188,7 +188,7 @@
             var a = $(document.createElement('a'));
             var showhide = 'as_id' + data[i]['id'];
             a.href = "javascript:Display('" + showhide + "')";
-            a.addClassName('btn fas fa-edit')
+            a.addClassName('btn fas fa-comment')
             who.addClassName("who");
             who.innerHTML = data[i]['name'] + '<span class="right-align" onclick="q_del(' + data[i]['id'] + ',' + data[
                 i]['password'] + ')"><a class="btn fas fa-minus"></a></span>';
