@@ -168,12 +168,12 @@
         $$('#slide_qna')[0].innerHTML = '';
         $$('#qna-answer')[0].innerHTML = '\
                                     <div class="q_input">\
-                                    <input type="text" size="6" placeholder="닉네임" id="q_id"/>\
-                                    <input type="password" size="6" placeholder="비밀번호" id="q_pw"/>\
-                                    <input type="text" size="40" maxlength="1000" placeholder="댓글" id="q_content"/>\
+                                    <input type="text" size="6" placeholder="Name" id="q_id"/>\
+                                    <input type="password" size="10" placeholder="Password" id="q_pw"/>\
+                                    <input type="text" size="40" maxlength="1000" placeholder="Question" id="q_content"/>\
                                     <input type="hidden" id="l_id" value="' + lecture_id + '"\
                                 </div>\
-                                <input type="button" onclick="addq()" value="제출" /><br>\
+                                <input type="button" onclick="addq()" value="Submit" /><br>\
                                 <div id="slide_qna"></div>';
         for (i = 0; i < data.length; i++) {
             var question = $(document.createElement('div'));
@@ -208,10 +208,10 @@
             q_input.addClassName('q_input');
             q_input.id = 'as_id' + data[i]['id'];
             q_input.style.display = 'none';
-            q_input.innerHTML = '<input type="text" size="6" placeholder="닉네임"/>'
-            q_input.innerHTML += '<input type="password" size="6" placeholder="비밀번호"/>';
-            q_input.innerHTML += '<input type="text" size="40" maxlength="1000" placeholder="답글"/>';
-            q_input.innerHTML += '<input type="button" onclick="adda(' + data[i]['id'] + ')" value="제출" />'
+            q_input.innerHTML = '<input type="text" size="6" placeholder="Name"/>'
+            q_input.innerHTML += '<input type="password" size="10" placeholder="Password"/>';
+            q_input.innerHTML += '<input type="text" size="40" maxlength="1000" placeholder="Comment"/>';
+            q_input.innerHTML += '<input type="button" onclick="adda(' + data[i]['id'] + ')" value="Submit" />'
             question.appendChild(q_input);
             $$('#slide_qna')[0].appendChild(question);
 
@@ -259,7 +259,7 @@
     }
 
     function a_del(id, pw) {
-        var result = prompt("비밀번호를 입력 하시오.", '');
+        var result = prompt("Password를 입력 하시오.", '');
         if (result == pw) {
             new Ajax.Request("qna-minus.php", {
                 method: "get",
@@ -271,12 +271,12 @@
                 onException: ajaxFailed
             });
         } else {
-            alert("비밀번호가 틀렸습니다.");
+            alert("Password가 틀렸습니다.");
         }
     }
 
     function q_del(id, pw) {
-        var result = prompt("비밀번호를 입력 하시오.", '');
+        var result = prompt("Password를 입력 하시오.", '');
         if (result == pw) {
             new Ajax.Request("qna-minus.php", {
                 method: "get",
@@ -288,7 +288,7 @@
                 onException: ajaxFailed
             });
         } else {
-            alert("비밀번호가 틀렸습니다.");
+            alert("Password가 틀렸습니다.");
         }
     }
 

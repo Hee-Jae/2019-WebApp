@@ -11,13 +11,13 @@
     <div id="qna_page">
         <div id="qna_question_button">
             <input type="checkbox" class="qna_checkbox" id="qna_post_question" />
-            <label for="qna_post_question" class="qna_title">질문하기</label>
+            <label for="qna_post_question" class="btn qna_title">Press here to Question</label>
             <div class="qna_post_button">
                 <div class="qna_input_box">
                     <form action='post_process.php' method='post'>
-                        <p>이름 : <input type='text' name='name'></p>
-                        <p>비밀번호 : <input type='password' name='password'></p>
-                        <p>카테고리 : <select name="lecture_id"> </p>
+                        <p>Name : <input type='text' name='name'></p>
+                        <p>Password : <input type='password' name='password'></p>
+                        <p>Lecture : <select name="lecture_id"> </p>
                         <optgroup>
                             <option value="00"> Introduction </option>
                             <option value="01"> The Internet & World Wide Web </option>
@@ -49,8 +49,8 @@
                             <option value="b10"> Ajax & XML & JSON - Week 14 </option>
                         <optgroup>
                         </select>
-                        <p>질문 : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
-                        <p><input type='submit' value='작성'></p>
+                        <p>Q : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
+                        <p><input type='submit' value='Submit'></p>
                     </form>
                 </div>
             </div> <!-- post_button -->
@@ -104,19 +104,19 @@
                     <br>
                     <br>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_update_question<?=$row["id"]?>" />
-                    <label for="qna_update_question<?=$row["id"]?>" class="qna_title qna-first-button">수정</label>
+                    <label for="qna_update_question<?=$row["id"]?>" class="btn qna_title qna-first-button fas fa-edit"></label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_delete_question<?=$row["id"]?>" />
-                    <label for="qna_delete_question<?=$row["id"]?>" class="qna_title">삭제</label>
+                    <label for="qna_delete_question<?=$row["id"]?>" class="btn fas fa-trash-alt qna_title"></label>
                     <input type="radio" class="qna_checkbox" name="button" id="qna_reply_question<?=$row["id"]?>" />
-                    <label for="qna_reply_question<?=$row["id"]?>" class="qna_title">댓글</label>
+                    <label for="qna_reply_question<?=$row["id"]?>" class="btn fas fa-comment qna_title"></label>
                     
                     <div class="qna_update_button">
                         <div class="qna_input_box">
                             <form action="update_process.php" method="POST">
-                                <p> 비밀번호 : <input type="password" name="password"> </p>
+                                <p> Password : <input type="password" name="password"> </p>
                                 <p><textarea name='content' cols='35' rows='5'><?=$row["content"]?></textarea></p>
                                 <input type="hidden" name="id" value=<?=$row["id"]?> >
-                                <p><input type="submit" value="수정"></p>
+                                <p><input type="submit" value="Edit"></p>
                             </form>
                         </div>
                     </div>
@@ -124,9 +124,9 @@
                     <div class='qna_delete_button'>
                         <div class="qna_input_box">
                             <form action='delete_process.php' method='POST'>
-                                <p> 비밀번호 : <input type='password' name='password'> </p>
+                                <p> Password : <input type='password' name='password'> </p>
                                 <input type='hidden' name='id' value=<?=$row["id"]?> >
-                                <p><input type='submit' value='삭제'></p>
+                                <p><input type='submit' value='Delete'></p>
                             </form>
                         </div>
                     </div>
@@ -134,11 +134,11 @@
                     <div class='qna_reply_button'>
                         <div class="qna_input_box">
                             <form action="reply_process.php" method="POST">
-                                <p>이름 : <input type='text' name='name'></p>
-                                <p>비밀번호 : <input type='password' name='password'></p>
-                                <p> 답변 : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
+                                <p>Name : <input type='text' name='name'></p>
+                                <p>Password : <input type='password' name='password'></p>
+                                <p>Answer : <p><textarea name='content' cols='35' rows='5'></textarea></p> </p>
                                 <p> <input type='hidden' name='id' value='<?=$row["id"]?>'> </p>
-                                <p><input type='submit' value='작성'></p>
+                                <p><input type='submit' value='Submit'></p>
                             </form>
                         </div>
                     </div> <!-- reply_button -->
@@ -162,16 +162,16 @@
                         <br>
                         <br>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_update_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title">수정</label>
+                        <label for="qna_rep_update_question<?=$ans["id"]?>" class="qna_rep_title btn fas fa-edit"></label>
                         <input type="radio" class="qna_rep_checkbox" name="button" id="qna_rep_delete_question<?=$ans["id"]?>" />
-                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title">삭제</label>
+                        <label for="qna_rep_delete_question<?=$ans["id"]?>" class="qna_rep_title btn fas fa-trash-alt"></label>
                         <div class="qna_rep_update_button">
                             <div class="qna_input_box">
                                 <form action="rep_update_process.php" method="POST">
-                                    <p> 비밀번호 : <input type="password" name="password"> </p>
+                                    <p> Password : <input type="password" name="password"> </p>
                                     <p><textarea name='content' cols='35' rows='5'><?=$ans["content"]?></textarea></p>
                                     <input type="hidden" name="id" value=<?=$ans["id"]?> >
-                                    <p><input type="submit" value="수정"></p>
+                                    <p><input type="submit" value="Edit"></p>
                                 </form>
                             </div>
                         </div>
@@ -179,9 +179,9 @@
                         <div class='qna_rep_delete_button'>
                             <div class="qna_input_box">
                                 <form action='rep_delete_process.php' method='POST'>
-                                    <p> 비밀번호 : <input type='password' name='password'> </p>
+                                    <p> Password : <input type='password' name='password'> </p>
                                     <input type='hidden' name='id' value=<?=$ans["id"]?> >
-                                    <p><input type='submit' value='삭제'></p>
+                                    <p><input type='submit' value='Delete'></p>
                                 </form>
                             </div>
                         </div> <!-- delete_button -->
