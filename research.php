@@ -1,3 +1,7 @@
+<?php
+    $db = new PDO("mysql:dbname=webapp;host=localhost", "root", "root");
+?>
+
 <!DOCTYPE HTML>
 
 <html lang="ko">
@@ -7,36 +11,46 @@
         <!-- Navbar -->
         <?php include('assets/php/navbar.php'); ?>
         <!-- Article -->
-        <div class="article">
-        <div class="research">
-            <h1><span class="h1-border">RESEARCH</span></h1>
-                <h2 class="intro">introduction</h2>
-                <p class="title">Web&Web security</p>
-                <ul class="content">
-                    <img src="https://selab.hanyang.ac.kr/research/images/web_securitymodified.png" width="100" height="60"/>
-                    <li>1</li>
-                    <li>2</li></ul>
-                <p class="title">Formal Engineering Methods</p>
-                <ul class= "content">
-                    <img src= "https://selab.hanyang.ac.kr/research/images/formalmethod.png" width="100" height="60"/>
-                    <li>1</li>
-                    <li>2</li></ul>
-                <p class="title">Requirement Engineering</p>
-                <ul class="content">
-                    <img src="https://selab.hanyang.ac.kr/research/images/RE.png" width="100" height="60"/>                    
-                    <li>1</li>
-                    <li>2</li></ul>
-                <p class="title">Real-Time Software Engineering</p>
-                <ul class="content">
-                    <img src="https://selab.hanyang.ac.kr/research/images/Realtime.png" width="100" height="60" />
-                    <li>1</li>
-                    <li>2</li></ul>
-                <p class="title">Semi-structured Data</p>
-                <ul class="content"> 
-                    <img src="https://selab.hanyang.ac.kr/research/images/XML.png" width="100" height="60" />
-                    <li>1</li>
-                    <li>2</li></ul>
-        </div>
+        <div class="member-article">
+            <h1><span class="h1-border">RESEARCH
+            <?php
+                if(isset($_SESSION['username']) && isset($_SESSION['password'])){
+                    echo '<span class="right-align"><a href="./research-add.php "class="btn fas fa-plus"></a></span>';
+                }
+            ?>
+            </span></h1>
+                <!-- <h2 class="intro">introduction</h2> -->
+            <?php
+            $maxid = $db->query("select max(id) from research")->fetchColumn();
+            for(;$maxid>0;$maxid--){
+                $title = $db->query("select * from research where id = $maxid")->fetchColumn(1);
+                if($title != ""){
+            ?>
+            <div class="member-position">
+                <h2><?=$title?>
+                <?php
+                    if(isset($_SESSION['username']) && isset($_SESSION['password'])){?>
+                        <form action="./research-edit.php" method="POST">
+                            <button class="fas fa-edit btn fa-pull-right" name="title" value="<?=$title?>"></button>
+                        </form>
+                    <?php } ?>
+                </h2>
+                <div class="member-human">
+                    <img class="member-photo" src="images/<?=$title?>.png" />
+                    <div class="member-human-contents">
+                        <ul class="research-ul">
+                            <?php
+                            $info_s = $db->query("select * from info_research where title = '$title'");
+                            foreach($info_s as $info){
+                                $content = $info['info'];?>
+                                <li><?=$content?></li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+                <?php } ?>
+            <?php } ?>
         </div>
         <!-- Footer -->
         <?php include('assets/php/footer.php'); ?>

@@ -16,6 +16,15 @@ create TABLE members(
     rank varchar(20)
 );
 
+create TABLE research(
+    id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    title varchar(50)
+);
+
+create TABLE info_research(
+    title varchar(50),
+    info TEXT
+);
 
 CREATE TABLE careers(
     name varchar(20),
@@ -44,6 +53,10 @@ CREATE TABLE gallery(
     title VARCHAR(30) NOT NULL PRIMARY KEY,
     src VARCHAR(30) NOT NULL
 );
+INSERT INTO research(title)
+VALUES("Web&Web security");
+
+INSERT INTO info_research VALUES("Web&Web security", "Semantic web");
 
 INSERT INTO members VALUES("Scott Ukjin Lee", "scottlee@hanyang.ac.kr", "https://selab.hanyang.ac.kr", "an asst. prof. in the CSE Dept. @ HYU (ERICA)", "Prof");
 

@@ -10,20 +10,20 @@
         <div id="left_banner_yc">
             <span class="banner_head">international</span>
             <ul>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#i2019">2019</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#i2018">2018</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#i2017">2017</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#i2016">2016</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#i2015">older</a></li>
+                <li><a href="#i2019">2019</a></li>
+                <li><a href="#i2018">2018</a></li>
+                <li><a href="#i2017">2017</a></li>
+                <li><a href="#i2016">2016</a></li>
+                <li><a href="#i2015">older</a></li>
             </ul>
             <hr id="banner_hr">
             <span class="banner_head">domestic</span>
             <ul>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#d2019">2019</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#d2018">2018</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#d2017">2017</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#d2016">2016</a></li>
-                <li><a href="http://localhost/base/2019-WebApp-master/publication.php#d2015">older</a></li>
+                <li><a href="#d2019">2019</a></li>
+                <li><a href="#d2018">2018</a></li>
+                <li><a href="#d2017">2017</a></li>
+                <li><a href="#d2016">2016</a></li>
+                <li><a href="#d2015">older</a></li>
             </ul>
         </div>
         <div class="article_yc">
