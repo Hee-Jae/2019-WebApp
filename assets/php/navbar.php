@@ -23,7 +23,7 @@
                 <a class="btn nav-link <?php if ($currentpage === 'QNA') {echo ' btn-info';} ?>" href="qna-slide.php">QNA</a>
             </li>
             <li class="nav-item <?php if ($currentpage === 'GALLARY') {echo ' active';} ?>">
-                <a class="btn nav-link <?php if ($currentpage === 'GALLARY') {echo ' btn-info';} ?>" href="gallary.php">GALLELY</a>
+                <a class="btn nav-link <?php if ($currentpage === 'GALLARY') {echo ' btn-info';} ?>" href="gallary.php">GALLERY</a>
             </li>
         </ul>
         <ul class="nav navbar-nav login mr-auto">
