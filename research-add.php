@@ -23,7 +23,7 @@
             <div class="form-group">
                 <div class="input-group">
                     <div class="input-group-prepend">
-                        <span class="input-group-text">Number of Infomation</span>
+                        <span class="input-group-text">Number of Information</span>
                     </div>
                     <select name="n_infos">
                         <option>1</option>
