@@ -16,7 +16,7 @@
         <div id="member-info">
             <ul>
                 <li class="member-name"> <?php echo $name;?> </li>
-                <li><?php echo $email;?></li>
+                <li><?php echo '<a href="mailto:'.$email.'">'.$email.'</a>';?></li>
                 <li><a href="<?php echo $web;?>" target="_blank"> <?php echo $web;?></a></li>
                 <li><?php echo $comment;?></li>
             </ul>
