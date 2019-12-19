@@ -85,9 +85,8 @@
                     </select>
                 </div> <!-- lctopbox -->
                 <div id="expansion">
-                    <a target="blank" id='image_link'
-                        href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"><img
-                            src="./images/expansion.png" width=15px /></a>
+                    <a target="blank" class="fas fa-compress" id='image_link'
+                        href="https://selab.hanyang.ac.kr/courses/cse326/2019/lecture/00-introduction.html"></a>
                 </div> <!-- expansoin -->
                 <div class="shortt">
                     <a onclick="showHide('qna-answer')" onfocus="this.blur()">

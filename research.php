@@ -30,6 +30,9 @@
                 <h2><?=$title?>
                 <?php
                     if(isset($_SESSION['username']) && isset($_SESSION['password'])){?>
+                        <form action="./assets/php/research-del.php" method="POST">
+                            <button class="fas fa-minus btn fa-pull-right" name="title" value="<?=$title?>"></button>
+                        </form>
                         <form action="./research-edit.php" method="POST">
                             <button class="fas fa-edit btn fa-pull-right" name="title" value="<?=$title?>"></button>
                         </form>

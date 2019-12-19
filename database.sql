@@ -1,3 +1,4 @@
+DROP DATABASE webapp;
 CREATE DATABASE webapp;
 USE webapp;
 
