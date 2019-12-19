@@ -296,6 +296,10 @@
         id = $$('#q_id')[0].value;
         pw = $$('#q_pw')[0].value;
         content = $$('#q_content')[0].value;
+        if (id == '' || pw == '' || content == ''){
+            alert("필드를 모두 채우십시오.");
+            return;
+        }
         l_id = $$('#l_id')[0].value;
         new Ajax.Request("q_add.php", {
             method: "post",
@@ -315,6 +319,10 @@
         name = $$('#as_id' + id + ' input')[0].value;
         pw = $$('#as_id' + id + ' input')[1].value;
         content = $$('#as_id' + id + ' input')[2].value;
+        if (id == '' || pw == '' || content == ''){
+            alert("필드를 모두 채우십시오.");
+            return;
+        }
         new Ajax.Request("a_add.php", {
             method: "post",
             parameters: {
