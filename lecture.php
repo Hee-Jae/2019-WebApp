@@ -141,6 +141,22 @@
             onException: ajaxFailed
         });
     }
+    function Onadd() {
+        var val = $$("#selectbox")[0];
+        var res = val.value;
+        var lecture_id = strrev(res);
+        lecture_id = lecture_id.substr(lecture_id.indexOf('-') + 1, 2);
+        lecture_id = strrev(lecture_id);
+        new Ajax.Request("get_qna.php", {
+            method: "get",
+            parameters: {
+                "lecture_id": lecture_id
+            },
+            onSuccess: get_qna,
+            onFailure: ajaxFailed,
+            onException: ajaxFailed
+        });
+    }
 
     function get_qna(ajax) {
         var val = $$("#selectbox")[0];
@@ -252,7 +268,7 @@
                 parameters: {
                     "a_id": id
                 },
-                onSuccess: Onchange,
+                onSuccess: Onadd,
                 onFailure: ajaxFailed,
                 onException: ajaxFailed
             });
@@ -269,7 +285,7 @@
                 parameters: {
                     "id": id
                 },
-                onSuccess: Onchange,
+                onSuccess: Onadd,
                 onFailure: ajaxFailed,
                 onException: ajaxFailed
             });
@@ -291,7 +307,7 @@
                 "content": content,
                 "l_id": l_id
             },
-            onSuccess: Onchange,
+            onSuccess: Onadd,
             onFailure: ajaxFailed,
             onException: ajaxFailed
         });
@@ -309,7 +325,7 @@
                 "content": content,
                 "q_id": id
             },
-            onSuccess: Onchange,
+            onSuccess: Onadd,
             onFailure: ajaxFailed,
             onException: ajaxFailed
         });
