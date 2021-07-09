@@ -10,6 +10,14 @@
 - MEMBERS 추가, 수정, 삭제 기능
 - Gallery 추가, 수정, 삭제 기능
 
+### LANGUAGE
+<span>
+<img src=https://user-images.githubusercontent.com/22339356/125117830-bf0ad900-e129-11eb-9474-69e392a7098d.png width="150">
+<img src=https://user-images.githubusercontent.com/22339356/125118298-7acc0880-e12a-11eb-8d5f-bbbe95fca2a7.png width="150">
+<img src=https://user-images.githubusercontent.com/22339356/125117214-dac1af80-e128-11eb-84de-613d45d77bc4.png width="150">
+</span>
+
+
 ### 페이지 접속 방법
 - [WAMP](https://bitnami.com/stack/wamp/installer) 혹은 [MAMP](https://www.mamp.info/en/windows/) 설치
 - 서버 디렉토리에 본 Repository 파일들 추가
